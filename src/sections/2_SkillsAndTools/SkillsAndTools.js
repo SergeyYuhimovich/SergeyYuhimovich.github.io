@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/actions';
-import './Skills.css';
+import './SkillsAndTools.css';
 
 import Skill from './components/Skill';
 
-class Skills extends Component {
+class SkillsAndTools extends Component {
     render() {
         const {reducers: {skills} } = this.props;
 
         return (
-            <div className="skills">
+            <div className="skills-and-tools">
                 <h2 className="title">
-                    Skills
+                    Skills & Tools
                 </h2>
 
                 <div className="content">
-                    <ul className="skills__list">
+                    <ul className="skills-and-tools__skills-list">
                         {skills.map( (skill) =>
-                            <li className="skills__item" key={skill.id}>
+                            <li className="skills-and-tools__skills-item" key={skill.id}>
                                 <Skill title={skill.title}
                                        value={skill.value}
                                 />
@@ -31,4 +31,4 @@ class Skills extends Component {
     }
 }
 
-export default connect( ( {reducers} ) => ( {reducers} ), actions )(Skills);
+export default connect( ( {reducers} ) => ( {reducers} ), actions )(SkillsAndTools);

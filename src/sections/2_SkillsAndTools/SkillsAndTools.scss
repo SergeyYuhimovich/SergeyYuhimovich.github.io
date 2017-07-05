@@ -1,0 +1,26 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+.skills-and-tools {
+  @include section;
+
+  .title {
+    @include title;
+  }
+
+  .content {
+    @include content;
+  }
+
+  .skills-and-tools__skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .skills-and-tools__skills-item {
+    width: calc(50% - (25px / 2));
+    padding-bottom: 25px;
+  }
+}

@@ -1,0 +1,29 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+
+  .skill__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .skill__title {
+
+  }
+
+  .progressbar {
+    height: 25px;
+    border: 2px solid black;
+
+    .progressbar__progress {
+      height: 100%;
+      background-color: red;
+    }
+  }
+}
