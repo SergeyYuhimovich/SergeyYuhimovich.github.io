@@ -1,10 +1,14 @@
 import React from 'react';
 import './About.css';
 
-const About = ({}) => {
+const About = () => {
     return (
         <div className="about">
-            About
+            <h2 className="title">About</h2>
+
+            <div className="content">
+
+            </div>
         </div>
     )
 };

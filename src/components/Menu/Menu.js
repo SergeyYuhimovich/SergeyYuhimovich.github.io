@@ -1,10 +1,28 @@
 import React from 'react';
 import './Menu.css';
 
-const Menu = ({}) => {
+const Menu = () => {
     return (
         <div className="menu">
-            Menu
+            <div className="content">
+                <ul className="menu__list">
+                    <li className="menu__item">
+                        <a href="#" className="menu__link">About</a>
+                    </li>
+
+                    <li className="menu__item">
+                        <a href="#" className="menu__link">Skills</a>
+                    </li>
+
+                    <li className="menu__item">
+                        <a href="#" className="menu__link">Experience</a>
+                    </li>
+
+                    <li className="menu__item">
+                        <a href="#" className="menu__link">Contacts</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 };

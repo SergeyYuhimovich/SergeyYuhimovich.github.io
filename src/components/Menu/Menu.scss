@@ -2,5 +2,34 @@
 @import 'utils/mixins';
 
 .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #fff;
 
+  .content {
+    @include content;
+
+    justify-content: flex-start;
+    padding: 0 25px;
+  }
+
+  .menu__list {
+    display: flex;
+  }
+
+  .menu__item {
+
+  }
+
+  .menu__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0 25px;
+  }
 }

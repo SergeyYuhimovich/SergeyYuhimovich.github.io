@@ -1,0 +1,15 @@
+@import './utils/variables';
+@import './utils/mixins';
+
+.about {
+  @include section;
+
+  .title {
+    @include title;
+
+  }
+
+  .content {
+    @include content;
+  }
+}

@@ -1,0 +1,14 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+.skills {
+  @include section;
+
+  .title {
+    @include title;
+  }
+
+  .content {
+    @include content;
+  }
+}
