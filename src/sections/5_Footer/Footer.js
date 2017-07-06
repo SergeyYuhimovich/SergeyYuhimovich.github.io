@@ -15,9 +15,8 @@ class Footer extends Component {
                 <div className="content">
                     <ul className="socials-list">
                         {socials.map( (social) =>
-                            <li className="socials-list__item">
-                                <Social key={social.id}
-                                        title={social.title}
+                            <li className="socials-list__item" key={social.id}>
+                                <Social title={social.title}
                                         url={social.url}
                                 />
                             </li>
@@ -30,4 +29,3 @@ class Footer extends Component {
 }
 
 export default connect( ( {reducers} ) => ( {reducers} ), actions )(Footer);
-

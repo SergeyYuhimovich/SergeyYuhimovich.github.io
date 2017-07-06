@@ -1,4 +1,7 @@
-export const aboutData = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, amet animi aut, commodi doloremque et ex, ipsam iste nemo nihil officiis placeat quam sunt totam vel? Atque dignissimos eligendi officiis.';
+export const aboutData = {
+    text: 'My name is Sergey Yuhimovich and I am Ukraine-based Front-end Developer creating responsive websites and applications. HTML 5, SCSS, React and Redux are my preferrable technologies, but I also have experience in React Native mobile applications development for iOS and Android platform. You can find more information about my skills and experience on this page and in my CV, which you can download by using the button below. Feel free to contact me.',
+    cv: 'fff'
+};
 
 export const skillsData = [
     {
@@ -24,35 +27,35 @@ export const skillsData = [
 
     {
         id: 4,
-        title: 'Less',
-        icon: '',
-        value: '70%'
-    },
-
-    {
-        id: 5,
         title: 'Bootstrap',
         icon: '',
         value: '50%'
     },
 
     {
-        id: 6,
+        id: 5,
         title: 'Foundation',
         icon: '',
         value: '70%'
     },
 
     {
-        id: 7,
+        id: 6,
         title: 'JavaScript',
         icon: '',
         value: '35%'
     },
 
     {
-        id: 8,
+        id: 7,
         title: 'React',
+        icon: '',
+        value: '35%'
+    },
+
+    {
+        id: 8,
+        title: 'React Native',
         icon: '',
         value: '30%'
     },
@@ -68,7 +71,7 @@ export const skillsData = [
         id: 10,
         title: 'GIT',
         icon: '',
-        value: '45%'
+        value: '50%'
     }
 ];
 
@@ -108,14 +111,73 @@ export const toolsData = [
         title: 'Toggl',
         icon: ''
     },
+
+    {
+        id: 7,
+        title: 'BitBucket',
+        icon: ''
+    },
+
+    {
+        id: 8,
+        title: 'GitLab',
+        icon: ''
+    }
 ];
 
 export const projectsData = [
     {
         id: 1,
         title: 'Nice Chat',
-        description: 'Description...',
+        description: 'Full featured eCommerce oriented online chat solution',
+        stack: ['HTML 5', 'CSS 3', 'SCSS', 'React', 'React Router', 'Alt', 'Webpack', 'jQuery', 'Django Templates'],
+        image: '',
         url: 'https://www.nice.chat/'
+    },
+
+    {
+        id: 2,
+        title: 'Coopico',
+        description: 'Classified advertisements website',
+        stack: ['HTML 5', 'CSS 3', 'SCSS', 'Angular'],
+        image: '',
+        url: 'https://www.coopico.com/'
+    },
+
+    {
+        id: 3,
+        title: 'NAVTV',
+        description: 'American manufacturer and distributor of automotive safety, entertainment and convenience products',
+        stack: ['HTML 5', 'CSS 3', 'SCSS', 'JavaScript', 'jQuery', 'Django Templates'],
+        image: '',
+        url: 'https://navtv.com/'
+    },
+
+    {
+        id: 4,
+        title: 'NAVTV Mobile',
+        description: 'Mobile chat app for NAVTV',
+        stack: ['React Native'],
+        image: '',
+        url: 'https://itunes.apple.com/us/developer/navtv/id1182529526'
+    },
+
+    {
+        id: 5,
+        title: 'Malachite',
+        description: 'SEO, SMM, UI/UX studio',
+        stack: ['HTML 5', 'SCSS', 'Foundation'],
+        image: '',
+        url: 'https://malachitestudio.com/'
+    },
+
+    {
+        id: 6,
+        title: 'My Home',
+        description: 'Mobile app for remote water heater control',
+        stack: ['React Native'],
+        image: '',
+        in_development: true
     }
 ];
 

@@ -4,6 +4,9 @@
 .contacts {
   @include section;
 
+  height: calc(100vh - 100px);
+  margin-bottom: 100px;
+
   .title {
     @include title;
   }

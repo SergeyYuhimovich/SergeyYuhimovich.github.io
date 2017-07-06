@@ -1,10 +1,13 @@
 @mixin section {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
   padding-top: 50px;
+  z-index: 1;
+  background-color: #fff;
 
   // temporary
   outline: 2px dashed salmon;
