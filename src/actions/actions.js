@@ -1,7 +1,8 @@
 import * as types from './actionTypes';
 
-export function onAction() {
+export function onWaypointEvent(section) {
     return {
-        type: types.ON_ACTION,
+        type: types.ON_WAYPOINT_EVENT,
+        section
     };
 }

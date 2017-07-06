@@ -8,18 +8,30 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 2;
+
+  &.menu--onscroll {
+    background-color: #fff;
+  }
 
   .content {
     @include content;
 
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 0 25px;
   }
 
+  .menu__logo {
+    z-index: 3;
+  }
+
   .menu__list {
+    position: relative;
     display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    z-index: 3;
   }
 
   .menu__item {
@@ -30,7 +42,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 60px;
     padding: 0 25px;
+    text-transform: uppercase;
+    text-decoration: none;
   }
 }

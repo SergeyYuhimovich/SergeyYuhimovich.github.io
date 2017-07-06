@@ -5,7 +5,13 @@ const Menu = () => {
     return (
         <div className="menu">
             <div className="content">
+                <p className="menu__logo">SY</p>
+
                 <ul className="menu__list">
+                    <li className="menu__item">
+                        <a href="#" className="menu__link">Home</a>
+                    </li>
+
                     <li className="menu__item">
                         <a href="#" className="menu__link">About</a>
                     </li>

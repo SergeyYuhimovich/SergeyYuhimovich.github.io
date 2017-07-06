@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from './actions/actions';
+import Waypoint from 'react-waypoint'
 import './App.css';
 
 import Menu from './components/Menu';
@@ -10,19 +13,38 @@ import Contacts from './sections/4_Contacts';
 import Footer from './sections/5_Footer';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="app">
-          <Menu />
-          <Intro />
-          <About />
-          <SkillsAndTools />
-          <Experience />
-          <Contacts />
-          <Footer />
-      </div>
-    );
-  }
+    render() {
+        const { reducers: { currentSection }, onWaypointEvent } = this.props;
+        return (
+            <div className="app">
+                <Waypoint onEnter={() => onWaypointEvent('top')} />
+
+                <Menu />
+
+                <Intro />
+
+                <Waypoint onEnter={() => onWaypointEvent('intro')} />
+
+                <About />
+
+                <Waypoint onEnter={() => onWaypointEvent('about')} />
+
+                <SkillsAndTools />
+
+                <Waypoint onEnter={() => onWaypointEvent('skillsAndTools')} />
+
+                <Experience />
+
+                <Waypoint onEnter={() => onWaypointEvent('Experience')} />
+
+                <Contacts />
+
+                <Waypoint onEnter={() => onWaypointEvent('Contacts')} />
+
+                <Footer />
+            </div>
+        );
+    }
 }
 
-export default App;
+export default connect( ( {reducers} ) => ( {reducers} ), actions )(App);

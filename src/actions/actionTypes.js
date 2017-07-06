@@ -1,1 +1,1 @@
-export const ON_ACTION = 'ON_ACTION';
+export const ON_WAYPOINT_EVENT = 'ON_WAYPOINT_EVENT';
