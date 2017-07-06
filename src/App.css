@@ -1,18 +1,83 @@
 /*=========
   Palette
 =========*/
+/*=========================
+  Media Queries variables
+=========================*/
+/*===================
+  Poly-fluid sizing
+===================*/
+/*
+list-remove
+
+Remove an item from a list
+@param $list - A SASS list
+@param $index - The list index to remove
+@returns A SASS list
+@author Jake Wilson <jake.e.wilson@gmail.com>
+*/
+/*
+list-sort
+
+Sort a SASS list
+@param $list - A SASS list
+@returns A sorted SASS list
+@requires function list-remove
+@author Jake Wilson <jake.e.wilson@gmail.com>
+*/
+/*
+map-sort
+
+Sort map by keys
+@param $map - A SASS map
+@returns A SASS map sorted by keys
+@requires function list-sort
+@author Jake Wilson <jake.e.wilson@gmail.com>
+*/
+/*
+linear-interpolation
+
+Calculate the definition of a line between two points
+@param $map - A SASS map of viewport widths and size value pairs
+@returns A linear equation as a calc() function
+@example
+font-size: linear-interpolation((320px: 18px, 768px: 26px));
+@author Jake Wilson <jake.e.wilson@gmail.com>
+*/
+/*
+Generate linear interpolated size values through multiple break points
+
+@param $property - A string CSS property name
+@param $map - A SASS map of viewport unit and size value pairs
+@requires function linear-interpolation
+@requires function map-sort
+@example
+@include poly-fluid-sizing('font-size', (576px: 22px, 768px: 24px, 992px: 34px));
+@author Jake Wilson <jake.e.wilson@gmail.com>
+
+Note: mixin name changed from 'poly-fluid-sizing' to 'sizing'
+*/
+/*======================
+  Media Queries Mixins
+======================*/
 /*=============
   Base styles
 =============*/
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif; }
 
 html,
 body {
   margin: 0;
   padding: 0; }
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700; }
 
 ul {
   margin: 0;
