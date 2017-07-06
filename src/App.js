@@ -19,15 +19,13 @@ class App extends Component {
 
         return (
             <div className="app">
-                <Waypoint onEnter={() => onWaypointEvent('top')}
-                          onLeave={() => onWaypointEvent('intro')}
-                />
-
                 <Menu currentSection={currentSection} />
+
+                <Waypoint onEnter={() => onWaypointEvent('top')}/>
 
                 <Intro />
 
-                <Waypoint scrollableAncestor={window} onEnter={() => onWaypointEvent('intro')} topOffset={'50%'} />
+                <Waypoint scrollableAncestor={window} onLeave={() => onWaypointEvent('intro')} topOffset={'99%'} />
 
                 <About />
 

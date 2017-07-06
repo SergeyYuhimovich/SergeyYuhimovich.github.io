@@ -1,6 +1,12 @@
 /*=========
   Palette
 =========*/
+$palette-text-black: #333;
+$palette-text-gray-dark: #555;
+$palette-text-gray: #777;
+$palette-text-gray-light: #999;
+$palette-accent: red;
+$palette-accent-text: $palette-accent;
 
 /*=========================
   Media Queries variables

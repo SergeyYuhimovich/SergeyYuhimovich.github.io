@@ -6,28 +6,57 @@ const Menu = ( {currentSection} ) => {
 
     return (
         <div className={currentSection === 'top' ? 'menu' : 'menu menu--onscroll'}>
+            <div className="menu__background"/>
+
             <div className="content">
-                <p className="menu__logo">SY</p>
+                <div className="menu__logo">
+                    <span>SY</span>
+                </div>
 
                 <ul className="menu__list">
                     <li className="menu__item">
-                        <a href="#" className={currentSection === 'intro' || currentSection === 'top' ? 'menu__link--active' : 'menu__link'}>Home</a>
+                        {currentSection === 'intro' || currentSection === 'top'
+                            ?
+                            <span className="menu__link--active">Home</span>
+                            :
+                            <a href="#" className="menu__link">Home</a>
+                        }
                     </li>
 
                     <li className="menu__item">
-                        <a href="#" className={currentSection === 'about' ? 'menu__link--active' : 'menu__link'}>About</a>
+                        {currentSection === 'about'
+                            ?
+                            <span className="menu__link--active">About</span>
+                            :
+                            <a href="#" className="menu__link">About</a>
+                        }
                     </li>
 
                     <li className="menu__item">
-                        <a href="#" className={currentSection === 'skillsAndTools' ? 'menu__link--active' : 'menu__link'}>Skills & Tools</a>
+                        {currentSection === 'skillsAndTools'
+                            ?
+                            <span className="menu__link--active">Skills & Tools</span>
+                            :
+                            <a href="#" className="menu__link">Skills & Tools</a>
+                        }
                     </li>
 
                     <li className="menu__item">
-                        <a href="#" className={currentSection === 'experience' ? 'menu__link--active' : 'menu__link'}>Experience</a>
+                        {currentSection === 'experience'
+                            ?
+                            <span className="menu__link--active">Experience</span>
+                            :
+                            <a href="#" className="menu__link">Experience</a>
+                        }
                     </li>
 
                     <li className="menu__item">
-                        <a href="#" className={currentSection === 'contacts' ? 'menu__link--active' : 'menu__link'}>Contacts</a>
+                        {currentSection === 'contacts'
+                            ?
+                            <span className="menu__link--active">Contacts</span>
+                            :
+                            <a href="#" className="menu__link">Contacts</a>
+                        }
                     </li>
                 </ul>
             </div>

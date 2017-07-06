@@ -10,6 +10,7 @@
 *::after {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  color: $palette-text-black;
 }
 
 html,
@@ -32,4 +33,6 @@ ul {
 
 .app {
   position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
 }

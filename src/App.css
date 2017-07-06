@@ -67,7 +67,8 @@ Note: mixin name changed from 'poly-fluid-sizing' to 'sizing'
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  color: #333; }
 
 html,
 body {
@@ -85,4 +86,6 @@ ul {
   list-style: none; }
 
 .app {
-  position: relative; }
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto; }

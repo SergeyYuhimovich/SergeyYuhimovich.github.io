@@ -31,6 +31,10 @@
   outline: 2px dashed cornflowerblue;
 }
 
+@mixin transition($property: background-color, $time: 0.2s) {
+  transition: $property, $time;
+}
+
 /*===================
   Poly-fluid sizing
 ===================*/
