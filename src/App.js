@@ -13,33 +13,37 @@ import Contacts from './sections/4_Contacts';
 import Footer from './sections/5_Footer';
 
 class App extends Component {
+
     render() {
         const { reducers: { currentSection }, onWaypointEvent } = this.props;
+
         return (
             <div className="app">
-                <Waypoint onEnter={() => onWaypointEvent('top')} />
+                <Waypoint onEnter={() => onWaypointEvent('top')}
+                          onLeave={() => onWaypointEvent('intro')}
+                />
 
-                <Menu />
+                <Menu currentSection={currentSection} />
 
                 <Intro />
 
-                <Waypoint onEnter={() => onWaypointEvent('intro')} />
+                <Waypoint scrollableAncestor={window} onEnter={() => onWaypointEvent('intro')} topOffset={'50%'} />
 
                 <About />
 
-                <Waypoint onEnter={() => onWaypointEvent('about')} />
+                <Waypoint scrollableAncestor={window} onEnter={() => onWaypointEvent('about')} topOffset={'50%'} />
 
                 <SkillsAndTools />
 
-                <Waypoint onEnter={() => onWaypointEvent('skillsAndTools')} />
+                <Waypoint scrollableAncestor={window} onEnter={() => onWaypointEvent('skillsAndTools')} topOffset={'50%'} />
 
                 <Experience />
 
-                <Waypoint onEnter={() => onWaypointEvent('Experience')} />
+                <Waypoint scrollableAncestor={window} onEnter={() => onWaypointEvent('experience')} topOffset={'50%'} />
 
                 <Contacts />
 
-                <Waypoint onEnter={() => onWaypointEvent('Contacts')} />
+                <Waypoint onEnter={() => onWaypointEvent('contacts')} />
 
                 <Footer />
             </div>

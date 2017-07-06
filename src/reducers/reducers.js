@@ -12,7 +12,7 @@ export const initialState = {
 export default function reducers(state = initialState, action = {}) {
     switch (action.type) {
         case types.ON_WAYPOINT_EVENT:
-            console.log(action.section)
+            console.log(action.section);
             return {...state, currentSection: action.section};
 
         default:
