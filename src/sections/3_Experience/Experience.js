@@ -10,7 +10,7 @@ class Experience extends Component {
         const {reducers: {projects}} = this.props;
 
         return (
-            <div className="experience">
+            <div className="experience" id="Experience">
                 <h2 className="title">Experience</h2>
 
                 <div className="content">

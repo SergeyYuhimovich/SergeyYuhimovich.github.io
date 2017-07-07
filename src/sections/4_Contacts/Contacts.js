@@ -5,7 +5,7 @@ import Input from './components/Input';
 
 const Contacts = () => {
     return (
-        <div className="contacts">
+        <div className="contacts" id="Contacts">
             <h2 className="title">Contacts</h2>
 
             <div className="content">

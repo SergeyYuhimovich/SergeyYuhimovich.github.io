@@ -1,6 +1,8 @@
 import React from 'react';
 import './Intro.css';
 
+import FontAwesome from 'react-fontawesome';
+
 import bg_9_16_320 from './images/bg_9_16_w_320.jpg';
 import bg_9_16_1050 from './images/bg_9_16_w_1050.jpg';
 import bg_9_16_1534 from './images/bg_9_16_w_1534.jpg';
@@ -13,9 +15,15 @@ import bg_16_9_596 from './images/bg_16_9_w_596.jpg';
 import bg_16_9_1075 from './images/bg_16_9_w_1075.jpg';
 import bg_16_9_1440 from './images/bg_16_9_w_1440.jpg';
 
-import bg_21_9_480 from './images/bg_21_9_w_480.jpg';
-import bg_21_9_2562 from './images/bg_21_9_w_2562.jpg';
-import bg_21_9_3840 from './images/bg_21_9_w_3840.jpg';
+import bg_21_9_1024 from './images/bg_21_9_w_1024.jpg';
+import bg_21_9_1830 from './images/bg_21_9_w_1830.jpg';
+import bg_21_9_2464 from './images/bg_21_9_w_2464.jpg';
+import bg_21_9_3020 from './images/bg_21_9_w_3020.jpg';
+import bg_21_9_3506 from './images/bg_21_9_w_3506.jpg';
+import bg_21_9_3943 from './images/bg_21_9_w_3943.jpg';
+import bg_21_9_4400 from './images/bg_21_9_w_4400.jpg';
+import bg_21_9_4797 from './images/bg_21_9_w_4797.jpg';
+import bg_21_9_5217 from './images/bg_21_9_w_5217.jpg';
 
 const Intro = () => {
     return (
@@ -33,10 +41,21 @@ const Intro = () => {
                         sizes="(max-width: 2400px) 60vw, 1440px"
                         srcSet={[bg_16_9_596, '596w,', bg_16_9_1075, '1075w,', bg_16_9_1440, '1440w'].join(' ')}
                 />
-                <img sizes="(max-width: 9600px) 40vw, 3840px"
-                     srcSet={[ bg_21_9_2562, '2562w,', bg_21_9_3840, '3840w'].join(' ')}
-                     src={bg_21_9_3840}
-                     alt="" />
+                <img sizes="(max-width: 5217px) 100vw, 5217px"
+                     srcSet={[
+                         bg_21_9_1024, '1024w,',
+                         bg_21_9_1830, '1830w,',
+                         bg_21_9_2464, '2464w,',
+                         bg_21_9_3020, '3020w,',
+                         bg_21_9_3506, '3506w,',
+                         bg_21_9_3943, '3943w,',
+                         bg_21_9_4400, '4400w,',
+                         bg_21_9_4797, '4797w,',
+                         bg_21_9_5217, '5217w,'
+                     ].join(' ')}
+                     src="bg_21_9_w_5217.jpg"
+                     alt=""
+                />
             </picture>
 
             <div className="intro__title-block">
@@ -44,7 +63,11 @@ const Intro = () => {
                 <h2 className="subtitle">Front-end Web / Mobile Developer</h2>
             </div>
 
-            <a href="#" className="intro__next">Next</a>
+            <a href="#" className="next-btn">
+                <FontAwesome className='next-btn__icon'
+                             name='angle-down'
+                />
+            </a>
         </div>
     )
 };

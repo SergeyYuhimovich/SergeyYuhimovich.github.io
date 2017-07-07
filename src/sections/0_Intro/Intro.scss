@@ -3,7 +3,8 @@
 
 .intro {
   @include section;
-  background-color: saddlebrown;
+
+  background-color: #6d655f;
 
   .intro__bg {
     position: absolute;
@@ -28,11 +29,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 15%;
     z-index: 2;
   }
 
   .title {
     @include sizing('font-size', (768px: 70px, 1600px: 100px));
+
     margin: 0;
     font-weight: 700;
     text-align: center;
@@ -42,6 +45,7 @@
 
   .subtitle {
     @include sizing('font-size', (768px: 35px, 1600px: 50px));
+
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
@@ -50,9 +54,30 @@
     text-shadow: 1px 1px 1px $palette-text-black;
   }
 
-  .intro__next {
-    height: 100px;
+  .next-btn {
+    @include transition;
+
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 25px 0;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
     z-index: 2;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, .15);
+    }
+
+    .next-btn__icon::before {
+      font-size: 22px;
+      color: #fff;
+    }
   }
 }

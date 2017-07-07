@@ -1,4 +1,5 @@
 import React from 'react';
+import Scrollchor from 'react-scrollchor';
 import './Menu.css';
 
 const Menu = ( {currentSection} ) => {
@@ -19,7 +20,7 @@ const Menu = ( {currentSection} ) => {
                             ?
                             <span className="menu__link--active">Home</span>
                             :
-                            <a href="#" className="menu__link">Home</a>
+                            <Scrollchor to="" className="menu__link" animate={{duration: 600}}>Home</Scrollchor>
                         }
                     </li>
 
@@ -28,7 +29,7 @@ const Menu = ( {currentSection} ) => {
                             ?
                             <span className="menu__link--active">About</span>
                             :
-                            <a href="#" className="menu__link">About</a>
+                            <Scrollchor to="#About" className="menu__link" animate={{duration: 600}}>About</Scrollchor>
                         }
                     </li>
 
@@ -37,7 +38,7 @@ const Menu = ( {currentSection} ) => {
                             ?
                             <span className="menu__link--active">Skills & Tools</span>
                             :
-                            <a href="#" className="menu__link">Skills & Tools</a>
+                            <Scrollchor to="#SkillsAndTools" className="menu__link" animate={{duration: 600}}>Skills & Tools</Scrollchor>
                         }
                     </li>
 
@@ -46,7 +47,7 @@ const Menu = ( {currentSection} ) => {
                             ?
                             <span className="menu__link--active">Experience</span>
                             :
-                            <a href="#" className="menu__link">Experience</a>
+                            <Scrollchor to="#Experience" className="menu__link" animate={{duration: 600}}>Experience</Scrollchor>
                         }
                     </li>
 
@@ -55,7 +56,7 @@ const Menu = ( {currentSection} ) => {
                             ?
                             <span className="menu__link--active">Contacts</span>
                             :
-                            <a href="#" className="menu__link">Contacts</a>
+                            <Scrollchor to="#Contacts" className="menu__link" animate={{duration: 600}}>Contacts</Scrollchor>
                         }
                     </li>
                 </ul>

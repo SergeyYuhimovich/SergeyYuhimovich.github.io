@@ -10,7 +10,7 @@ class SkillsAndTools extends Component {
         const {reducers: {skills} } = this.props;
 
         return (
-            <div className="skills-and-tools">
+            <div className="skills-and-tools" id="SkillsAndTools">
                 <h2 className="title">
                     Skills & Tools
                 </h2>
