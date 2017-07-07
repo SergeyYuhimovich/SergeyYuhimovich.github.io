@@ -1,0 +1,116 @@
+@import './utils/variables';
+@import './utils/mixins';
+
+.about-me {
+  @include section;
+
+  .title {
+    @include title;
+
+  }
+
+  .content {
+    @include content;
+
+    flex-grow: 0;
+    justify-content: space-between;
+    margin: auto 0;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  .my-photo {
+    @include sizing('width', (320px: 160px, 768px: 240px, 1024px: 270px, 1600px: 400px, 1920px: 400px));
+    @include sizing('margin-right', (320px: 0, 768px: 30px, 1024px: 80px, 1600px: 130px, 1920px: 150px));
+
+    width: 30%;
+    height: 80%;
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
+  }
+
+  .about-me__col {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .about-me__text {
+
+  }
+
+  .about-me__paragraph {
+    @include sizing('margin-bottom', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
+    @include sizing('font-size', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
+
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-indent: 5%;
+  }
+
+  .about-me__buttons {
+    display: flex;
+    margin-left: 5%;
+
+    @include mobile {
+      justify-content: space-around;
+      margin-left: 0;
+
+    }
+  }
+
+  .about-me__btn,
+  .about-me__btn:focus {
+    @include sizing('font-size', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
+    @include sizing('padding-left', (320px: 10px, 1920px: 25px));
+    @include sizing('padding-right', (320px: 10px, 1920px: 25px));
+    @include transition(border-radius);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 25px;
+    border: 1px solid $palette-text-black;
+    border-radius: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      border-radius: 10px;
+    }
+  }
+
+  .about-me__btn--cv {
+    @extend .about-me__btn;
+
+    margin-right: 25px;
+
+    &:hover {
+      border-color: $palette-accent;
+      color: $palette-accent-text;
+    }
+
+    &:active {
+      border-color: darken($palette-accent, 5%);
+      color: darken($palette-accent-text, 5%);
+    }
+  }
+
+  .about-me__btn--contact {
+    @extend .about-me__btn;
+
+    &:hover {
+      border-color: $palette-accent;
+      color: $palette-accent-text;
+    }
+
+    &:active {
+
+    }
+  }
+}

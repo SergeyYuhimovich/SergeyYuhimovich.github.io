@@ -12,7 +12,7 @@ class SkillsAndTools extends Component {
         return (
             <div className="skills-and-tools" id="SkillsAndTools">
                 <h2 className="title">
-                    Skills & Tools
+                    Skills and Tools
                 </h2>
 
                 <div className="content">

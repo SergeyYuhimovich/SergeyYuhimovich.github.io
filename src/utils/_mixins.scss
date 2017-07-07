@@ -1,40 +1,3 @@
-@mixin section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100vh;
-  padding-top: 60px;
-  z-index: 1;
-  background-color: #fff;
-
-  // temporary
-  outline: 2px dashed salmon;
-}
-
-@mixin title {
-  text-align: center;
-}
-
-@mixin content($direction: row) {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: $direction;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1650px;
-  padding: 25px;
-
-  // temporary
-  outline: 2px dashed cornflowerblue;
-}
-
-@mixin transition($property: background-color, $time: 0.2s) {
-  transition: $property, $time;
-}
-
 /*===================
   Poly-fluid sizing
 ===================*/
@@ -216,4 +179,47 @@ Note: mixin name changed from 'poly-fluid-sizing' to 'sizing'
   @media (max-width: #{$viewport}) {
     @content;
   }
+}
+
+/*========================
+  General Styling Mixins
+========================*/
+
+@mixin section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 90px;
+  z-index: 1;
+  background-color: #fff;
+
+  // temporary
+  outline: 2px dashed salmon;
+}
+
+@mixin title {
+  @include sizing('font-size', (320px: 28px, 768px: 30px));
+  margin: 0;
+  text-align: center;
+}
+
+@mixin content($direction: row) {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1650px;
+  padding: 25px;
+
+  // temporary
+  outline: 2px dashed cornflowerblue;
+}
+
+@mixin transition($property: background-color, $time: 0.2s) {
+  transition: $property, $time;
 }

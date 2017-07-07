@@ -1,5 +1,11 @@
-export const aboutData = {
-    text: 'My name is Sergey Yuhimovich and I am Ukraine-based Front-end Developer creating responsive websites and applications. HTML 5, SCSS, React and Redux are my preferrable technologies, but I also have experience in React Native mobile applications development for iOS and Android platform. You can find more information about my skills and experience on this page and in my CV, which you can download by using the button below. Feel free to contact me.',
+export const aboutMeData = {
+    text: [
+        'Hi! My name is Sergey Yuhimovich and I am Ukraine-based Front-end Developer creating responsive websites and applications.',
+        'HTML 5, SCSS, React and Redux are my preferrable technologies, but I also have experience in React Native mobile applications development for iOS and Android platform.',
+        'You can find more information about my skills and experience on this page and in my CV, which you can download by using the button below.',
+        'Feel free to contact me.'
+        ],
+
     cv: 'fff'
 };
 

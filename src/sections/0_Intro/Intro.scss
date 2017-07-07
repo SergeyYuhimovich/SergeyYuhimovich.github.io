@@ -34,7 +34,7 @@
   }
 
   .title {
-    @include sizing('font-size', (768px: 70px, 1600px: 100px));
+    @include sizing('font-size', (320px: 33px, 768px: 70px, 1600px: 100px));
 
     margin: 0;
     font-weight: 700;
@@ -44,7 +44,7 @@
   }
 
   .subtitle {
-    @include sizing('font-size', (768px: 35px, 1600px: 50px));
+    @include sizing('font-size', (320px: 18px, 768px: 35px, 1600px: 50px));
 
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -73,6 +73,10 @@
 
     &:hover {
       background-color: rgba(255, 255, 255, .15);
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, .25);
     }
 
     .next-btn__icon::before {

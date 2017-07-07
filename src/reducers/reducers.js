@@ -3,6 +3,7 @@ import * as types from '../actions/actionTypes';
 import * as data from '../data';
 
 export const initialState = {
+    aboutMe: data.aboutMeData,
     skills: data.skillsData,
     projects: data.projectsData,
     socials: data.socialsData,

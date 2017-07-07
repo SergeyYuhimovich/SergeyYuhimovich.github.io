@@ -6,7 +6,7 @@ import './App.css';
 
 import Menu from './components/Menu';
 import Intro from './sections/0_Intro';
-import About from './sections/1_About';
+import AboutMe from './sections/1_AboutMe';
 import SkillsAndTools from './sections/2_SkillsAndTools';
 import Experience from './sections/3_Experience';
 import Contacts from './sections/4_Contacts';
@@ -15,7 +15,7 @@ import Footer from './sections/5_Footer';
 class App extends Component {
 
     render() {
-        const { reducers: { currentSection }, onWaypointEvent } = this.props;
+        const { reducers: { currentSection, aboutMe }, onWaypointEvent } = this.props;
 
         return (
             <div className="app">
@@ -27,7 +27,7 @@ class App extends Component {
 
                 <Waypoint scrollableAncestor={window} onLeave={() => onWaypointEvent('intro')} topOffset={'99%'} />
 
-                <About />
+                <AboutMe aboutMe={aboutMe}/>
 
                 <Waypoint scrollableAncestor={window} onEnter={() => onWaypointEvent('about')} topOffset={'50%'} />
 
