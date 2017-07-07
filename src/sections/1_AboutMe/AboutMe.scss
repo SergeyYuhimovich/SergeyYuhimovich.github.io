@@ -25,8 +25,10 @@
     @include sizing('width', (320px: 160px, 768px: 240px, 1024px: 270px, 1600px: 400px, 1920px: 400px));
     @include sizing('margin-right', (320px: 0, 768px: 30px, 1024px: 80px, 1600px: 130px, 1920px: 150px));
 
+    flex-shrink: 0;
     width: 30%;
-    height: 80%;
+    height: auto;
+    object-fit: contain;
 
     @include mobile {
       margin-bottom: 25px;
@@ -38,10 +40,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
 
-  .about-me__text {
-
+    @include mobile {
+      flex-shrink: 0;
+    }
   }
 
   .about-me__paragraph {
@@ -58,7 +60,7 @@
     margin-left: 5%;
 
     @include mobile {
-      justify-content: space-around;
+      justify-content: space-between;
       margin-left: 0;
 
     }
@@ -67,8 +69,9 @@
   .about-me__btn,
   .about-me__btn:focus {
     @include sizing('font-size', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
-    @include sizing('padding-left', (320px: 10px, 1920px: 25px));
-    @include sizing('padding-right', (320px: 10px, 1920px: 25px));
+    @include sizing('padding-left', (320px: 8px, 1920px: 25px));
+    @include sizing('padding-right', (320px: 8px, 1920px: 25px));
+    @include sizing('border-width', (320px: 1px, 1920px: 2px));
     @include transition(border-radius);
 
     display: flex;
@@ -81,7 +84,11 @@
     text-decoration: none;
 
     &:hover {
-      border-radius: 10px;
+      @include sizing('border-radius', (320px: 10px, 1920px: 25px));
+    }
+
+    @include mobile {
+      width: calc(50% - (25px / 2));
     }
   }
 

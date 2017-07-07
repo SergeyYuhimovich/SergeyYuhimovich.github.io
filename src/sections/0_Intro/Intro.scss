@@ -45,6 +45,7 @@
 
   .subtitle {
     @include sizing('font-size', (320px: 18px, 768px: 35px, 1600px: 50px));
+    @include sizing('letter-spacing', (320px: 0.5px, 768px: 2.2px, 1600px: 3px));
 
     margin: 0;
     font-family: 'Open Sans', sans-serif;
