@@ -197,7 +197,7 @@ Note: mixin name changed from 'poly-fluid-sizing' to 'sizing'
   background-color: #fff;
 
   // temporary
-  outline: 2px dashed salmon;
+  // outline: 2px dashed salmon;
 }
 
 @mixin title {
@@ -219,7 +219,7 @@ Note: mixin name changed from 'poly-fluid-sizing' to 'sizing'
   padding: 25px;
 
   // temporary
-  outline: 2px dashed cornflowerblue;
+  // outline: 2px dashed cornflowerblue;
 }
 
 @mixin transition($property: background-color, $time: 0.2s) {

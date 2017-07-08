@@ -19,6 +19,8 @@
     @include sizing('font-size', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
     font-weight: 300;
     color: #fff;
+    cursor: default;
+    user-select: none;
   }
 
   .progressbar {
