@@ -13,8 +13,8 @@ const AboutMe = ( {aboutMe} ) => {
 
                 <div className="about-me__col">
                     <div className="about-me__text">
-                        {aboutMe.text.map((paragraph) =>
-                            <p className="about-me__paragraph">{paragraph}</p>
+                        {aboutMe.text.map((paragraph, index) =>
+                            <p className="about-me__paragraph" key={index}>{paragraph}</p>
                         )}
                     </div>
 

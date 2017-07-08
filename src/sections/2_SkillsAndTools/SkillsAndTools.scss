@@ -4,12 +4,43 @@
 .skills-and-tools {
   @include section;
 
+  .skills-and-tools__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+
+    * {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .skills-and-tools__tint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
   .title {
     @include title;
+
+    color: #fff;
+    z-index: 2;
   }
 
   .content {
     @include content(column);
+
+    z-index: 2;
   }
 
   .skills-and-tools__skills-list {
@@ -42,21 +73,43 @@
   }
 
   .skills-and-tools__tool {
-    @include sizing('height', (320px: 33px, 768px: 40px, 1600px: 50px));
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40px;
     margin: 10px;
 
-    @include mobile {
+    @include tablet-portrait {
       width: 25%;
       margin: 10px 0;
+    }
+
+    &:hover {
+
+      .skills-and-tools__tool-title {
+        //opacity: 1;
+      }
     }
   }
 
   .skills-and-tools__tool-logo {
-    height: 100%;
+    @include sizing('height', (320px: 33px, 768px: 40px, 1600px: 50px));
+
     object-fit: contain;
+  }
+
+  .skills-and-tools__tool-title {
+    @include transition(opacity);
+    @include sizing('font-size', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
+
+    margin-top: 5px;
+    color: #fff;
+    user-select: none;
+    //opacity: 0;
+
+    //@include mobile {
+    //  display: none;
+    //}
   }
 }

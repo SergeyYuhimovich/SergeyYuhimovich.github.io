@@ -17,13 +17,19 @@
   .skill__title,
   .skill__value {
     @include sizing('font-size', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
+    color: #fff;
   }
 
   .progressbar {
-    height: 7px;
+    @include sizing('height', (320px: 8px, 768px: 12px, 1920px: 16px));
+    @include sizing('border-radius', (320px: 4px, 768px: 6px, 1920px: 8px));
+
+    overflow: hidden;
     background-color: $palette-bg-gray-light;
 
     .progressbar__progress {
+      @include sizing('border-radius', (320px: 4px, 768px: 6px, 1920px: 8px));
+
       height: 100%;
       background-color: red;
     }
