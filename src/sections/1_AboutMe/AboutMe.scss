@@ -6,7 +6,6 @@
 
   .title {
     @include title;
-
   }
 
   .content {
@@ -98,13 +97,13 @@
     margin-right: 25px;
 
     &:hover {
-      border-color: $palette-accent;
-      color: $palette-accent-text;
+      border-color: $palette-accent-primary;
+      color: $palette-accent-primary-text;
     }
 
     &:active {
-      border-color: darken($palette-accent, 5%);
-      color: darken($palette-accent-text, 5%);
+      border-color: darken($palette-accent-primary, 5%);
+      color: darken($palette-accent-primary-text, 5%);
     }
   }
 
@@ -112,8 +111,8 @@
     @extend .about-me__btn;
 
     &:hover {
-      border-color: $palette-accent;
-      color: $palette-accent-text;
+      border-color: $palette-accent-primary;
+      color: $palette-accent-primary-text;
     }
 
     &:active {

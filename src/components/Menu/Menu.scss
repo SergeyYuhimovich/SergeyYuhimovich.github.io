@@ -32,7 +32,7 @@
       color: $palette-text-black;
 
       &:hover {
-        color: $palette-accent-text;
+        color: $palette-accent-primary-text;
       }
     }
 
@@ -117,7 +117,7 @@
     color: #fff;
 
     &:hover {
-      color: $palette-accent-text;
+      color: $palette-accent-primary-text;
     }
 
     &::after {
@@ -131,14 +131,14 @@
       width: 100%;
       height: 2px;
       opacity: 0;
-      background-color: $palette-accent-text;
+      background-color: $palette-accent-primary-text;
     }
   }
 
   .menu__link--active {
     @extend .menu__link;
 
-    color: $palette-accent-text;
+    color: $palette-accent-primary-text;
     cursor: default;
   }
 }

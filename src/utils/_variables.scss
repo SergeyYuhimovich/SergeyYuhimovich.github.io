@@ -5,8 +5,23 @@ $palette-text-black: #333;
 $palette-text-gray-dark: #555;
 $palette-text-gray: #777;
 $palette-text-gray-light: #999;
-$palette-accent: red;
-$palette-accent-text: $palette-accent;
+$palette-accent-primary: #e51c23;
+$palette-accent-secondary: #e51c23;
+$palette-accent-primary-text: $palette-accent-primary;
+$palette-accent-secondary-text: $palette-accent-secondary;
+
+$palette-bg-gray-light: #dfdfdf;
+
+$palette-html: #e34f26;
+$palette-css: #1572b6;
+$palette-scss: #cd6799;
+$palette-bootstrap: #62488a;
+$palette-foundation: #178eb9;
+$palette-javascript: #f0db4f;
+$palette-react: #00d8ff;
+$palette-react-native: #05a5d1;
+$palette-redux: #754abb;
+$palette-git: #f34f29;
 
 /*=========================
   Media Queries variables

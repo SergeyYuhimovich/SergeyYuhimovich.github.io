@@ -5,6 +5,7 @@ import * as data from '../data';
 export const initialState = {
     aboutMe: data.aboutMeData,
     skills: data.skillsData,
+    tools: data.toolsData,
     projects: data.projectsData,
     socials: data.socialsData,
     currentSection: ''

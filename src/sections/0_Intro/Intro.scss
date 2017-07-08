@@ -37,6 +37,7 @@
     @include sizing('font-size', (320px: 33px, 768px: 70px, 1600px: 100px));
 
     margin: 0;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     text-align: center;
     color: #fff;

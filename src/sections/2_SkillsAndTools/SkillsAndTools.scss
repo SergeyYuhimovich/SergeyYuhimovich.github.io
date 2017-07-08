@@ -9,18 +9,49 @@
   }
 
   .content {
-    @include content;
+    @include content(column);
   }
 
   .skills-and-tools__skills-list {
+    flex-grow: 2;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
   }
 
   .skills-and-tools__skills-item {
     width: calc(50% - (25px / 2));
+    max-width: 550px;
     padding-bottom: 25px;
+
+    &:nth-of-type(odd) {
+      margin-right: 25px;
+    }
+  }
+
+  .skills-and-tools__tools-list {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1510px;
+  }
+
+  .skills-and-tools__tool {
+    @include sizing('height', (320px: 33px, 768px: 40px, 1600px: 50px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin: 10px;
+  }
+
+  .skills-and-tools__tool-logo {
+    height: 100%;
+    object-fit: contain;
   }
 }

@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.5ffe96b1.css",
-  "main.css.map": "static/css/main.5ffe96b1.css.map",
-  "main.js": "static/js/main.178b0c99.js",
-  "main.js.map": "static/js/main.178b0c99.js.map",
+  "main.css": "static/css/main.97208629.css",
+  "main.css.map": "static/css/main.97208629.css.map",
+  "main.js": "static/js/main.12803ccb.js",
+  "main.js.map": "static/js/main.12803ccb.js.map",
   "static/media/bg_16_9_w_1075.jpg": "static/media/bg_16_9_w_1075.8add932b.jpg",
   "static/media/bg_16_9_w_1440.jpg": "static/media/bg_16_9_w_1440.acdc2460.jpg",
   "static/media/bg_16_9_w_596.jpg": "static/media/bg_16_9_w_596.a57ed936.jpg",
@@ -21,5 +21,13 @@
   "static/media/bg_9_16_w_1050.jpg": "static/media/bg_9_16_w_1050.84428240.jpg",
   "static/media/bg_9_16_w_1534.jpg": "static/media/bg_9_16_w_1534.b49c6afe.jpg",
   "static/media/bg_9_16_w_320.jpg": "static/media/bg_9_16_w_320.ea767c35.jpg",
-  "static/media/my_photo.jpg": "static/media/my_photo.ce2f7ae1.jpg"
+  "static/media/bitbucket.svg": "static/media/bitbucket.1a155f9b.svg",
+  "static/media/gitlab.svg": "static/media/gitlab.ab089c02.svg",
+  "static/media/macos.svg": "static/media/macos.63d12988.svg",
+  "static/media/my_photo.jpg": "static/media/my_photo.ce2f7ae1.jpg",
+  "static/media/pycharm.svg": "static/media/pycharm.cf481367.svg",
+  "static/media/sketch.svg": "static/media/sketch.212928f6.svg",
+  "static/media/slack.svg": "static/media/slack.324c0c7e.svg",
+  "static/media/toggl.svg": "static/media/toggl.d8acdea4.svg",
+  "static/media/zeplin.svg": "static/media/zeplin.d73d8555.svg"
 }

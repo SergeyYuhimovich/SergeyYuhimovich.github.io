@@ -27,9 +27,9 @@ const Menu = ( {currentSection} ) => {
                     <li className="menu__item">
                         {currentSection === 'about'
                             ?
-                            <span className="menu__link--active">About</span>
+                            <span className="menu__link--active">About Me</span>
                             :
-                            <Scrollchor to="#AboutMe" className="menu__link" animate={{duration: 600}}>About</Scrollchor>
+                            <Scrollchor to="#AboutMe" className="menu__link" animate={{duration: 600}}>About Me</Scrollchor>
                         }
                     </li>
 

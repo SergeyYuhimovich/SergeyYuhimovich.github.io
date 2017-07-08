@@ -21,8 +21,6 @@ body {
 
 h1, h2, h3,
 h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
   cursor: default;
   user-select: none;
 }
@@ -35,7 +33,7 @@ ul {
 
 .app {
   position: relative;
-  max-width: 1920px;
+  //max-width: 1920px;
   margin: 0 auto;
 }
 

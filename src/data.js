@@ -108,25 +108,25 @@ export const toolsData = [
 
     {
         id: 5,
-        title: 'Slack',
-        icon: ''
-    },
-
-    {
-        id: 6,
-        title: 'Toggl',
-        icon: ''
-    },
-
-    {
-        id: 7,
         title: 'BitBucket',
         icon: ''
     },
 
     {
-        id: 8,
+        id: 6,
         title: 'GitLab',
+        icon: ''
+    },
+
+    {
+        id: 7,
+        title: 'Slack',
+        icon: ''
+    },
+
+    {
+        id: 8,
+        title: 'Toggl',
         icon: ''
     }
 ];

@@ -11,19 +11,71 @@
   .skill__row {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 4px;
   }
 
-  .skill__title {
-
+  .skill__title,
+  .skill__value {
+    @include sizing('font-size', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
   }
 
   .progressbar {
-    height: 25px;
-    border: 2px solid black;
+    height: 7px;
+    background-color: $palette-bg-gray-light;
 
     .progressbar__progress {
       height: 100%;
       background-color: red;
+    }
+
+    .progressbar__progress--html-5 {
+      @extend .progressbar__progress;
+      background-color: $palette-html;
+    }
+
+    .progressbar__progress--css-3 {
+      @extend .progressbar__progress;
+      background-color: $palette-css;
+    }
+
+    .progressbar__progress--scss {
+      @extend .progressbar__progress;
+      background-color: $palette-scss;
+    }
+
+    .progressbar__progress--bootstrap {
+      @extend .progressbar__progress;
+      background-color: $palette-bootstrap;
+    }
+
+    .progressbar__progress--foundation {
+      @extend .progressbar__progress;
+      background-color: $palette-foundation;
+    }
+
+    .progressbar__progress--javascript {
+      @extend .progressbar__progress;
+      background-color: $palette-javascript;
+    }
+
+    .progressbar__progress--react {
+      @extend .progressbar__progress;
+      background-color: $palette-react;
+    }
+
+    .progressbar__progress--react-native {
+      @extend .progressbar__progress;
+      background-color: $palette-react-native;
+    }
+
+    .progressbar__progress--redux {
+      @extend .progressbar__progress;
+      background-color: $palette-redux;
+    }
+
+    .progressbar__progress--git {
+      @extend .progressbar__progress;
+      background-color: $palette-git;
     }
   }
 }

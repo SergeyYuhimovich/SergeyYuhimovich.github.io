@@ -12,7 +12,7 @@ const Skill = ( {title, value} ) => {
 
 
             <div className="progressbar">
-                <div className="progressbar__progress" style={{width: value}} />
+                <div className={"progressbar__progress--" + title.replace(' ', '-').toLowerCase()} style={{width: value}} />
             </div>
         </div>
     )
