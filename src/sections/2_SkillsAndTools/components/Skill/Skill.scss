@@ -17,6 +17,7 @@
   .skill__title,
   .skill__value {
     @include sizing('font-size', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
+    font-weight: 300;
     color: #fff;
   }
 
@@ -28,7 +29,8 @@
     background-color: $palette-bg-gray-light;
 
     .progressbar__progress {
-      @include sizing('border-radius', (320px: 4px, 768px: 6px, 1920px: 8px));
+      @include sizing('border-top-right-radius', (320px: 4px, 768px: 6px, 1920px: 8px));
+      @include sizing('border-bottom-right-radius', (320px: 4px, 768px: 6px, 1920px: 8px));
 
       height: 100%;
       background-color: red;

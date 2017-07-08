@@ -65,9 +65,11 @@ const Intro = () => {
                 />
             </picture>
 
+            <div className="intro__tint" />
+
             <div className="intro__title-block">
                 <h1 className="title">Sergey Yuhimovich</h1>
-                <h2 className="subtitle">Front-end Web / Mobile Developer</h2>
+                <h2 className="subtitle">Front-end Web <span>&</span> Mobile Developer</h2>
             </div>
 
             <a href="#" className="next-btn">
