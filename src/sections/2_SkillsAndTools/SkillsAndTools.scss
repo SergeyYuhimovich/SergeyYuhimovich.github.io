@@ -48,6 +48,11 @@
     align-items: center;
     height: 40px;
     margin: 10px;
+
+    @include mobile {
+      width: 25%;
+      margin: 10px 0;
+    }
   }
 
   .skills-and-tools__tool-logo {
