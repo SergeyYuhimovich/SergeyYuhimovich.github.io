@@ -4,10 +4,11 @@ import * as actions from '../../actions/actions';
 import './Experience.css';
 
 import Project from './components/Project';
+import ProjectDetails from './components/ProjectDetails';
 
 class Experience extends Component {
     render() {
-        const {reducers: {projects}} = this.props;
+        const {reducers: { projects, selectedProject }, onOpenProjectDetails, onCloseProjectDetails } = this.props;
 
         return (
             <div className="experience" id="Experience">
@@ -17,17 +18,17 @@ class Experience extends Component {
                     <ul className="experience__projects-list">
                         {projects.map((project) =>
                             <li className="experience__projects-item" key={project.id}>
-                                <Project title={project.title}
-                                         description={project.description}
-                                         stack={project.stack}
-                                         image={project.image}
-                                         imageRect={project.imageRect}
-                                         url={project.url}
+                                <Project project={project}
+                                         onOpenProjectDetails={onOpenProjectDetails}
                                 />
                             </li>
                         )}
                     </ul>
                 </div>
+
+                <ProjectDetails selectedProject={selectedProject}
+                                onCloseProjectDetails={onCloseProjectDetails}
+                />
             </div>
         )
     }

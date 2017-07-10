@@ -3,9 +3,9 @@ import './Project.css';
 
 import FontAwesome from 'react-fontawesome';
 
-const Project = ( {title, description, stack, image, imageRect, url} ) => {
+const Project = ( {project: {id, imageRect, title}, onOpenProjectDetails} ) => {
     return (
-        <div className="project">
+        <div className="project" onClick={() => onOpenProjectDetails(id)}>
             <img src={imageRect} alt="" className="project__img"/>
 
             <div className="project__info">
@@ -14,15 +14,6 @@ const Project = ( {title, description, stack, image, imageRect, url} ) => {
                 <FontAwesome className='project__details-icon'
                              name='search'
                 />
-
-
-                {/*<p className="project__description">{description}</p>*/}
-
-                {/* <ul className="project__stack"> */}
-                {/*{stack.map((technology) => */}
-                {/*<div className="project__technology" key={technology}>{technology}</div> */}
-                {/* )} */}
-                {/* </ul> */}
             </div>
         </div>
     )

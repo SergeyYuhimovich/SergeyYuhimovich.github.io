@@ -96,3 +96,7 @@ ul {
 .fa::before,
 .fa::after {
   font-family: 'FontAwesome'; }
+
+/* Remove scroll on the body when react-modal is open */
+.ReactModal__Body--open {
+  overflow: hidden; }
