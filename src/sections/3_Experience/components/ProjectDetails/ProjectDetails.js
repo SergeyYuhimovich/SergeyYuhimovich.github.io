@@ -15,7 +15,7 @@ const ProjectDetails = ( {selectedProject, onCloseProjectDetails} ) => {
                    contentLabel="Modal"
                    onRequesClose={onCloseProjectDetails}
             >
-                <div style={{zIndex: 10}}>
+                <div>
                     <img src={selectedProject.imageRect} alt="" className="project__img"/>
 
                     <div className="project__info">
