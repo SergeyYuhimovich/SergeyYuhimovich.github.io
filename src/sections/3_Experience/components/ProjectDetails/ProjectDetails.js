@@ -13,7 +13,7 @@ const ProjectDetails = ( {selectedProject, onCloseProjectDetails} ) => {
         return (
             <Modal isOpen={!!selectedProject}
                    contentLabel="Modal"
-                   onRequesClose={onCloseProjectDetails}
+                   onRequestClose={onCloseProjectDetails}
             >
                 <div>
                     <img src={selectedProject.imageRect} alt="" className="project__img"/>
