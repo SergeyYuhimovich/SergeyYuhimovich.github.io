@@ -2,5 +2,94 @@
 @import 'utils/mixins';
 
 .project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
 
+  &:hover {
+
+    .project__info {
+      top: 0;
+    }
+
+    .project__img {
+      filter: blur(4px) grayscale(100%);
+    }
+  }
+
+  .project__info {
+    @include sizing('padding', (320px: 0, 768px: 25px, 1024px: 25px, 1600px: 30px));
+    @include transition(top, 0.3s);
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(229, 28, 35, .8);
+    cursor: pointer;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  .project__img {
+    @include transition(blur, 0.3s);
+
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .project__title {
+    @include sizing('font-size', (320px: 12px, 768px: 22px, 1024px: 20px, 1600: 28px));
+
+    margin: 8px 0;
+    color: #fff;
+  }
+
+  .project__description {
+    @include sizing('font-size', (320px: 12px, 1024px: 14px, 1600: 16px));
+
+    margin: 0;
+    color: #fff;
+  }
+
+  .project__details-icon {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+
+    &::before {
+      @include sizing('font-size', (320px: 23px, 768px: 40px, 1024px: 35px, 1600: 42px));
+
+      color: #fff;
+    }
+  }
 }
+
+@supports (backdrop-filter: blur(5px)) {
+  .project {
+
+    &:hover {
+
+      .project__img {
+        filter: grayscale(100%);
+      }
+    }
+  }
+
+  .project__info {
+    background-color: rgba(229, 28, 35, .7);
+    backdrop-filter: blur(5px);
+  }
+}
+

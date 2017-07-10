@@ -12,7 +12,7 @@
     @include content;
 
     flex-grow: 0;
-    justify-content: space-between;
+    justify-content: center;
     margin: auto 0;
 
     @include mobile {
@@ -39,6 +39,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 800px;
 
     @include mobile {
       flex-shrink: 0;
@@ -46,8 +47,8 @@
   }
 
   .about-me__paragraph {
-    @include sizing('margin-bottom', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
-    @include sizing('font-size', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
+    @include sizing('margin-bottom', (320px: 14px, 1024px: 16px, 1600px: 18px, 1920px: 20px));
+    @include sizing('font-size', (320px: 14px, 1024px: 16px, 1600px: 18px, 1920px: 20px));
 
     margin-top: 0;
     margin-bottom: 10px;
@@ -67,7 +68,7 @@
 
   .about-me__btn,
   .about-me__btn:focus {
-    @include sizing('font-size', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
+    @include sizing('font-size', (320px: 14px, 1024px: 16px, 1600px: 18px, 1920px: 20px));
     @include sizing('padding-left', (320px: 8px, 1920px: 25px));
     @include sizing('padding-right', (320px: 8px, 1920px: 25px));
     @include sizing('border-width', (320px: 1px, 1920px: 2px));

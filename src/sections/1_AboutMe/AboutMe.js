@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutMe.css';
 
-import myPhoto from './images/my_photo.jpg';
+import myPhoto from './images/my_photo.png';
 
 const AboutMe = ( {aboutMe} ) => {
     return (

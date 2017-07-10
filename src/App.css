@@ -71,7 +71,7 @@ Note: mixin name changed from 'poly-fluid-sizing' to 'sizing'
 *::after {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  color: #333; }
+  color: #2E3032; }
 
 html,
 body {

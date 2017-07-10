@@ -1,3 +1,19 @@
+import macos from './sections/2_SkillsAndTools/images/macos.svg';
+import pycharm from './sections/2_SkillsAndTools/images/pycharm.svg';
+import zeplin from './sections/2_SkillsAndTools/images/zeplin.svg';
+import sketch from './sections/2_SkillsAndTools/images/sketch.svg';
+import bitbucket from './sections/2_SkillsAndTools/images/bitbucket.svg';
+import gitlab from './sections/2_SkillsAndTools/images/gitlab.svg';
+import slack from './sections/2_SkillsAndTools/images/slack.svg';
+import toggl from './sections/2_SkillsAndTools/images/toggl.svg';
+
+import nicechatRect from './sections/3_Experience/images/nicechat-rect.png';
+import coopicoRect from './sections/3_Experience/images/coopico-rect.png';
+import navtvRect from './sections/3_Experience/images/navtv-rect.png';
+import navtvMobileRect from './sections/3_Experience/images/navtv-mobile-rect.png';
+import malachiteRect from './sections/3_Experience/images/malachite-rect.png';
+import myHomeRect from './sections/3_Experience/images/myhome-rect.png';
+
 export const aboutMeData = {
     text: [
         'Hi! My name is Sergey Yuhimovich and I am Ukraine-based Front-end Developer creating responsive websites and applications.',
@@ -85,49 +101,49 @@ export const toolsData = [
     {
         id: 1,
         title: 'macOS',
-        icon: ''
+        icon: macos
     },
 
     {
         id: 2,
         title: 'PyCharm',
-        icon: ''
+        icon: pycharm
     },
 
     {
         id: 3,
         title: 'Zeplin',
-        icon: ''
+        icon: zeplin
     },
 
     {
         id: 4,
         title: 'Sketch',
-        icon: ''
+        icon: sketch
     },
 
     {
         id: 5,
         title: 'BitBucket',
-        icon: ''
+        icon: bitbucket
     },
 
     {
         id: 6,
         title: 'GitLab',
-        icon: ''
+        icon: gitlab
     },
 
     {
         id: 7,
         title: 'Slack',
-        icon: ''
+        icon: slack
     },
 
     {
         id: 8,
         title: 'Toggl',
-        icon: ''
+        icon: toggl
     }
 ];
 
@@ -138,6 +154,7 @@ export const projectsData = [
         description: 'Full featured eCommerce oriented online chat solution',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'React', 'React Router', 'Alt', 'Webpack', 'jQuery', 'Django Templates'],
         image: '',
+        imageRect: nicechatRect,
         url: 'https://www.nice.chat/'
     },
 
@@ -147,24 +164,27 @@ export const projectsData = [
         description: 'Classified advertisements website',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'Angular'],
         image: '',
+        imageRect: coopicoRect,
         url: 'https://www.coopico.com/'
     },
 
     {
         id: 3,
-        title: 'NAVTV',
+        title: 'NAV-TV',
         description: 'American manufacturer and distributor of automotive safety, entertainment and convenience products',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'JavaScript', 'jQuery', 'Django Templates'],
         image: '',
+        imageRect: navtvRect,
         url: 'https://navtv.com/'
     },
 
     {
         id: 4,
-        title: 'NAVTV Mobile',
+        title: 'NAV-TV Live Chat',
         description: 'Mobile chat app for NAVTV',
         stack: ['React Native'],
         image: '',
+        imageRect: navtvMobileRect,
         url: 'https://itunes.apple.com/us/developer/navtv/id1182529526'
     },
 
@@ -174,6 +194,7 @@ export const projectsData = [
         description: 'SEO, SMM, UI/UX studio',
         stack: ['HTML 5', 'SCSS', 'Foundation'],
         image: '',
+        imageRect: malachiteRect,
         url: 'https://malachitestudio.com/'
     },
 
@@ -183,6 +204,7 @@ export const projectsData = [
         description: 'Mobile app for remote water heater control',
         stack: ['React Native'],
         image: '',
+        imageRect: myHomeRect,
         in_development: true
     }
 ];

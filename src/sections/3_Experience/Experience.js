@@ -21,6 +21,7 @@ class Experience extends Component {
                                          description={project.description}
                                          stack={project.stack}
                                          image={project.image}
+                                         imageRect={project.imageRect}
                                          url={project.url}
                                 />
                             </li>
