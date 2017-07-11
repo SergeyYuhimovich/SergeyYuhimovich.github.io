@@ -79,7 +79,6 @@ class SkillsAndTools extends Component {
 
                 <div className="skills-and-tools__tint" />
 
-
                 <h2 className="title">
                     Skills & Tools
                 </h2>

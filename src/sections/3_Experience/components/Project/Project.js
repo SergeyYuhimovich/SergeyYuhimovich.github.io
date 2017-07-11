@@ -10,10 +10,6 @@ const Project = ( {project: {id, imageRect, title}, onOpenProjectDetails} ) => {
 
             <div className="project__info">
                 <h3 className="project__title">{title}</h3>
-
-                <FontAwesome className='project__details-icon'
-                             name='search'
-                />
             </div>
         </div>
     )

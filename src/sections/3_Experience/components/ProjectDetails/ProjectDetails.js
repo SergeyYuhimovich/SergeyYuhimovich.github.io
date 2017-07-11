@@ -14,9 +14,11 @@ const ProjectDetails = ( {selectedProject, onCloseProjectDetails} ) => {
             <Modal isOpen={!!selectedProject}
                    contentLabel="Modal"
                    onRequestClose={onCloseProjectDetails}
+                   className="project-details-content"
+                   overlayClassName="project-details-overlay"
             >
                 <div>
-                    <img src={selectedProject.imageRect} alt="" className="project__img"/>
+                    {/*<img src={selectedProject.imageRect} alt="" className="project__img"/>*/}
 
                     <div className="project__info">
                         <h3 className="project__title">{selectedProject.title}</h3>
@@ -31,9 +33,10 @@ const ProjectDetails = ( {selectedProject, onCloseProjectDetails} ) => {
                         </ul>
                     </div>
 
-                    <button onClick={onCloseProjectDetails}>close</button>
+                    <button className="project-details__close-btn" onClick={onCloseProjectDetails}>
+                        <FontAwesome className="project-details__close-icon" name='times'/>
+                    </button>
                 </div>
-
             </Modal>
         )
     }

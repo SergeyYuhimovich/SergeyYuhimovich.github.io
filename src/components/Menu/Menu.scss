@@ -3,6 +3,7 @@
 
 .menu {
   @include transition;
+  @include transition(top, 0.3s);
 
   position: fixed;
   top: 0;
@@ -140,5 +141,12 @@
 
     color: $palette-accent-primary-text;
     cursor: default;
+  }
+}
+
+.ReactModal__Body--open {
+
+  .menu {
+    top: -60px;
   }
 }
