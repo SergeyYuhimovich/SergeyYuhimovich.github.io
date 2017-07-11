@@ -7,12 +7,19 @@ import gitlab from './sections/2_SkillsAndTools/images/gitlab.svg';
 import slack from './sections/2_SkillsAndTools/images/slack.svg';
 import toggl from './sections/2_SkillsAndTools/images/toggl.svg';
 
-import nicechatRect from './sections/3_Experience/images/nicechat-rect.png';
-import coopicoRect from './sections/3_Experience/images/coopico-rect.png';
-import navtvRect from './sections/3_Experience/images/navtv-rect.png';
-import navtvMobileRect from './sections/3_Experience/images/navtv-mobile-rect.png';
-import malachiteRect from './sections/3_Experience/images/malachite-rect.png';
-import myHomeRect from './sections/3_Experience/images/myhome-rect.png';
+import nicechatRect from './sections/3_Experience/images/nicechat-rect.jpg';
+import coopicoRect from './sections/3_Experience/images/coopico-rect.jpg';
+import navtvRect from './sections/3_Experience/images/navtv-rect.jpg';
+import navtvMobileRect from './sections/3_Experience/images/navtv-mobile-rect-2.jpg';
+import malachiteRect from './sections/3_Experience/images/malachite-rect.jpg';
+import myHomeRect from './sections/3_Experience/images/myhome-rect.jpg';
+
+import nicechat from './sections/3_Experience/images/nicechat.png';
+import coopico from './sections/3_Experience/images/coopico.png';
+import navtv from './sections/3_Experience/images/navtv.png';
+import navtvMobile from './sections/3_Experience/images/navtv-mobile.png';
+import malachite from './sections/3_Experience/images/malachite.png';
+import myHome from './sections/3_Experience/images/myhome.png';
 
 export const aboutMeData = {
     text: [
@@ -153,7 +160,7 @@ export const projectsData = [
         title: 'Nice Chat',
         description: 'Full featured eCommerce oriented online chat solution',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'React', 'React Router', 'Alt', 'Webpack', 'jQuery', 'Django Templates'],
-        image: '',
+        image: nicechat,
         imageRect: nicechatRect,
         url: 'https://www.nice.chat/'
     },
@@ -163,7 +170,7 @@ export const projectsData = [
         title: 'Coopico',
         description: 'Classified advertisements website',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'Angular'],
-        image: '',
+        image: coopico,
         imageRect: coopicoRect,
         url: 'https://www.coopico.com/'
     },
@@ -173,7 +180,7 @@ export const projectsData = [
         title: 'NAV-TV',
         description: 'American manufacturer and distributor of automotive safety, entertainment and convenience products',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'JavaScript', 'jQuery', 'Django Templates'],
-        image: '',
+        image: navtv,
         imageRect: navtvRect,
         url: 'https://navtv.com/'
     },
@@ -183,7 +190,7 @@ export const projectsData = [
         title: 'NAV-TV Live Chat',
         description: 'Mobile chat app for NAVTV',
         stack: ['React Native'],
-        image: '',
+        image: navtvMobile,
         imageRect: navtvMobileRect,
         url: 'https://itunes.apple.com/us/developer/navtv/id1182529526'
     },
@@ -193,7 +200,7 @@ export const projectsData = [
         title: 'Malachite',
         description: 'SEO, SMM, UI/UX studio',
         stack: ['HTML 5', 'SCSS', 'Foundation'],
-        image: '',
+        image: malachite,
         imageRect: malachiteRect,
         url: 'https://malachitestudio.com/'
     },
@@ -203,7 +210,7 @@ export const projectsData = [
         title: 'My Home',
         description: 'Mobile app for remote water heater control',
         stack: ['React Native'],
-        image: '',
+        image: myHome,
         imageRect: myHomeRect,
         in_development: true
     }

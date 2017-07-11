@@ -14,29 +14,27 @@ const ProjectDetails = ( {selectedProject, onCloseProjectDetails} ) => {
             <Modal isOpen={!!selectedProject}
                    contentLabel="Modal"
                    onRequestClose={onCloseProjectDetails}
-                   className="project-details-content"
+                   className="project-details"
                    overlayClassName="project-details-overlay"
             >
-                <div>
-                    {/*<img src={selectedProject.imageRect} alt="" className="project__img"/>*/}
-
-                    <div className="project__info">
-                        <h3 className="project__title">{selectedProject.title}</h3>
+                <div className="project-details__info">
+                    <h3 className="project-details__title">{selectedProject.title}</h3>
 
 
-                        <p className="project__description">{selectedProject.description}</p>
+                    <p className="project-details__description">{selectedProject.description}</p>
 
-                        <ul className="project__stack">
-                            {selectedProject.stack.map( (technology) =>
-                                <div className="project__technology" key={technology}>{technology}</div>
-                            )}
-                        </ul>
-                    </div>
-
-                    <button className="project-details__close-btn" onClick={onCloseProjectDetails}>
-                        <FontAwesome className="project-details__close-icon" name='times'/>
-                    </button>
+                    <ul className="project-details__stack">
+                        {selectedProject.stack.map( (technology) =>
+                            <div className="project-details__technology" key={technology}>{technology}</div>
+                        )}
+                    </ul>
                 </div>
+
+                <img src={selectedProject.image} alt="" className="project-details__img"/>
+
+                <button className="project-details__close-btn" onClick={onCloseProjectDetails}>
+                    <FontAwesome className="project-details__close-icon" name='times'/>
+                </button>
             </Modal>
         )
     }
