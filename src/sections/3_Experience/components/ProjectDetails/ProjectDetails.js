@@ -28,9 +28,18 @@ const ProjectDetails = ( {selectedProject, onCloseProjectDetails} ) => {
                             <div className="project-details__technology" key={technology}>{technology}</div>
                         )}
                     </ul>
+
+                    {!selectedProject.in_development
+                        ?
+                        <a href={selectedProject.url} className="project-details__view-btn" target="_blank">View</a>
+                        :
+                        <span className="project-details__in-development-text">The project is under development</span>
+                    }
                 </div>
 
-                <img src={selectedProject.image} alt="" className="project-details__img"/>
+                <div className="project-details__img-wrapper">
+                    <img src={selectedProject.image} alt="" className="project-details__img"/>
+                </div>
 
                 <button className="project-details__close-btn" onClick={onCloseProjectDetails}>
                     <FontAwesome className="project-details__close-icon" name='times'/>

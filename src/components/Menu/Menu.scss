@@ -30,7 +30,7 @@
     }
 
     .menu__link:not(.menu__link--active) {
-      color: $palette-text-black;
+      color: $palette-text-gray-dark;
 
       &:hover {
         color: $palette-accent-primary-text;

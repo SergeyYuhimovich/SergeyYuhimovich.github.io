@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 75px 50px;
   background-color: rgba(0, 0, 0, .7);
   z-index: 99;
 
@@ -17,53 +18,160 @@
     background-color: rgba(0, 0, 0, .4);
     backdrop-filter: blur(3px)
   }
+
+  @include mobile {
+    align-items: stretch;
+    padding: 25px;
+  }
 }
 
 .project-details {
+  position: relative;
   display: flex;
-  width: calc(100% - 150px);
-  max-width: 1600px;
-  height: calc(100% - 100px);
+  align-items: center;
+  width: 100%;
+  max-width: 1150px;
+  height: 100%;
+  padding: calc(25px / 2);
   outline: none;
   background-color: #fff;
 
-  @include tablet-portrait {
+  @include mobile {
     flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
   }
 
   .project-details__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     width: 50%;
-    padding: 25px;
+    padding: calc(25px / 2);
+
+    @include mobile {
+      width: auto;
+      flex-shrink: 0;
+    }
   }
 
   .project-details__title {
+    @include sizing('margin-bottom', (320px: 22px, 768px: 30px, 1600px: 40px));
+    @include sizing('font-size', (320px: 22px, 768px: 30px, 1600px: 38px));
 
+    margin-top: 0;
+    line-height: 1.5;
+    font-weight: 300;
+
+    &:after {
+      content: '';
+      display: flex;
+      width: 100%;
+      height: 2px;
+      background-color: $palette-accent-primary;
+    }
+
+    @include mobile {
+      align-self: center;
+    }
   }
 
   .project-details__description {
+    @include sizing('font-size', (320px: 12px, 768px: 14px, 1600px: 18px));
+    @include sizing('margin-bottom', (320px: 12px, 768px: 15px, 1600px: 20px));
 
+    margin-top: 0;
+    color: $palette-text-gray-dark;
   }
 
   .project-details__stack {
+    @include sizing('margin-bottom', (320px: 15px, 768px: 20px, 1600px: 30px));
+
     display: flex;
     flex-wrap: wrap;
   }
 
-  .project-details__img {
+  .project-details__technology {
+    @include sizing('font-size', (320px: 10px, 768px: 12px, 1600px: 14px));
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid $palette-text-gray;
+    line-height: 1;
+    color: $palette-text-gray;
+
+    //background-color: $palette-accent-primary;
+    //color: #fff;
+  }
+
+  .project-details__view-btn {
+    @include sizing('height', (320px: 24px, 768px: 35px, 1600px: 40px));
+    @include sizing('padding-left', (320px: 20px, 1920px: 25px));
+    @include sizing('padding-right', (320px: 20px, 1920px: 25px));
+    @include sizing('border-radius', (320px: 12px, 768px: 17.5px, 1920px: 20px));
+    @include sizing('font-size', (320px: 12px, 768px: 14px, 1600px: 16px));
+    @include transition(background-color, 0.2s);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $palette-accent-primary;
+    color: #fff;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      background-color: lighten($palette-accent-primary, 10%);
+    }
+
+    &:active {
+      background-color: darken($palette-accent-primary, 10%);
+    }
+  }
+
+  .project-details__in-development-text {
+    @include sizing('font-size', (320px: 12px, 768px: 14px, 1600px: 18px));
+
+    color: $palette-text-gray-light;
+  }
+
+  .project-details__img-wrapper {
+    position: relative;
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
     width: 50%;
+    padding: calc(25px / 2);
+
+    @include mobile {
+      flex-grow: 1;
+      width: 100%;
+    }
+  }
+
+  .project-details__img {
+    position: absolute;
+    top: calc(25px / 2);
+    left: calc(25px / 2);
+    width: calc(100% - 25px);
+    height: calc(100% - 25px);
     object-fit: contain;
-    object-position: 50% 50%;
   }
 
   .project-details__close-btn {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 75px;
+    top: -50px;
+    right: -50px;
+    width: 50px;
     height: 50px;
+    padding: 0;
     border: none;
     outline: none;
     background-color: transparent;
@@ -73,11 +181,17 @@
 
       .project-details__close-icon {
 
-
         &::before {
           color: $palette-accent-primary;
         }
       }
+    }
+
+    @include mobile {
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
     }
   }
 
@@ -88,6 +202,10 @@
 
       font-size: 20px;
       color: #fff;
+
+      @include mobile {
+        color: $palette-text-black;
+      }
     }
   }
 }

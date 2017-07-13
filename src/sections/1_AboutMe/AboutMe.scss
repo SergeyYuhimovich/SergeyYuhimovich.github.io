@@ -53,6 +53,7 @@
     margin-top: 0;
     margin-bottom: 10px;
     text-indent: 5%;
+    color: $palette-text-gray-dark;
   }
 
   .about-me__buttons {
@@ -68,24 +69,20 @@
 
   .about-me__btn,
   .about-me__btn:focus {
-    @include sizing('font-size', (320px: 14px, 1024px: 16px, 1600px: 18px, 1920px: 20px));
-    @include sizing('padding-left', (320px: 8px, 1920px: 25px));
-    @include sizing('padding-right', (320px: 8px, 1920px: 25px));
-    @include sizing('border-width', (320px: 1px, 1920px: 2px));
+    @include sizing('height', (320px: 30px, 768px: 35px,  1600px: 40px));
+    @include sizing('padding-left', (320px: 15px, 768px: 17.5px,  1600px: 20px));
+    @include sizing('padding-right', (320px: 15px, 768px: 17.5px,  1600px: 20px));
+    @include sizing('border-radius', (320px: 15px, 769px: 17.5px, 1600px: 20px));
+    @include sizing('font-size', (320px: 12px, 1024px: 14px, 1600px: 16px, 1920px: 18px));
     @include transition(border-radius);
 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 25px;
-    border: 1px solid $palette-text-black;
     border-radius: 0;
     text-transform: uppercase;
     text-decoration: none;
-
-    &:hover {
-      @include sizing('border-radius', (320px: 10px, 1920px: 25px));
-    }
+    color: $palette-text-gray-dark;
 
     @include mobile {
       width: calc(50% - (25px / 2));
@@ -95,21 +92,27 @@
   .about-me__btn--cv {
     @extend .about-me__btn;
 
-    margin-right: 25px;
+    @include sizing('margin-right', (320px: 15px, 768px: 17.5px,  1600px: 20px));
+    @include transition(background-color);
+
+    color: #fff !important;
+    background-color: $palette-accent-primary;
 
     &:hover {
-      border-color: $palette-accent-primary;
-      color: $palette-accent-primary-text;
+      background-color: lighten($palette-accent-primary, 10%);
     }
 
     &:active {
-      border-color: darken($palette-accent-primary, 5%);
-      color: darken($palette-accent-primary-text, 5%);
+      background-color: darken($palette-accent-primary, 10%);
     }
   }
 
   .about-me__btn--contact {
     @extend .about-me__btn;
+
+    @include sizing('border-width', (1024px: 1px, 1600px: 2px));
+
+    border: 1px solid $palette-text-gray-dark;
 
     &:hover {
       border-color: $palette-accent-primary;

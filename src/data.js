@@ -158,7 +158,7 @@ export const projectsData = [
     {
         id: 1,
         title: 'Nice Chat',
-        description: 'Full featured eCommerce oriented online chat solution',
+        description: 'Full featured eCommerce oriented online chat solution.',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'React', 'React Router', 'Alt', 'Webpack', 'jQuery', 'Django Templates'],
         image: nicechat,
         imageRect: nicechatRect,
@@ -168,7 +168,7 @@ export const projectsData = [
     {
         id: 2,
         title: 'Coopico',
-        description: 'Classified advertisements website',
+        description: 'Classified advertisements website.',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'Angular'],
         image: coopico,
         imageRect: coopicoRect,
@@ -178,7 +178,7 @@ export const projectsData = [
     {
         id: 3,
         title: 'NAV-TV',
-        description: 'American manufacturer and distributor of automotive safety, entertainment and convenience products',
+        description: 'American manufacturer and distributor of automotive safety, entertainment and convenience products.',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'JavaScript', 'jQuery', 'Django Templates'],
         image: navtv,
         imageRect: navtvRect,
@@ -188,7 +188,7 @@ export const projectsData = [
     {
         id: 4,
         title: 'NAV-TV Live Chat',
-        description: 'Mobile chat app for NAVTV',
+        description: 'Mobile chat app for NAVTV.',
         stack: ['React Native'],
         image: navtvMobile,
         imageRect: navtvMobileRect,
@@ -198,7 +198,7 @@ export const projectsData = [
     {
         id: 5,
         title: 'Malachite',
-        description: 'SEO, SMM, UI/UX studio',
+        description: 'SEO, SMM, UI/UX studio.',
         stack: ['HTML 5', 'SCSS', 'Foundation'],
         image: malachite,
         imageRect: malachiteRect,
@@ -208,7 +208,7 @@ export const projectsData = [
     {
         id: 6,
         title: 'My Home',
-        description: 'Mobile app for remote water heater control',
+        description: 'Mobile app for remote water heater control.',
         stack: ['React Native'],
         image: myHome,
         imageRect: myHomeRect,
