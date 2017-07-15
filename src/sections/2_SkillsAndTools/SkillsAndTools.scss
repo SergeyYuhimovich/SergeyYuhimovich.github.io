@@ -98,17 +98,13 @@
 
   .skills-and-tools__tool-title {
     @include transition(opacity);
-    @include sizing('font-size', (320px: 14px, 768px: 16px, 1024px: 19px, 1600px: 26px, 1920px: 28px));
+    @include sizing('margin-top', (320px: 5px, 768px: 10px, 1600px: 15px));
+    @include sizing('font-size', (320px: 10px, 768px: 12px, 1600px: 16px));
+    @include sizing('letter-spacing', (320px: 1px, 1600px: 1.5px));
 
-    margin-top: 5px;
     font-weight: 300;
     color: #fff;
     user-select: none;
     cursor: default;
-    //opacity: 0;
-
-    //@include mobile {
-    //  display: none;
-    //}
   }
 }

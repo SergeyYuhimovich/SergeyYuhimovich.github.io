@@ -22,15 +22,15 @@
     }
 
     .menu__logo {
-      border-color: $palette-text-black;
+      border-color: $palette-black;
 
       span {
-        color: $palette-text-black;
+        color: $palette-black;
       }
     }
 
     .menu__link:not(.menu__link--active) {
-      color: $palette-text-gray-dark;
+      color: $palette-gray-dark;
 
       &:hover {
         color: $palette-accent-primary-text;

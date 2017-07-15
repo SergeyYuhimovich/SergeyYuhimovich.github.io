@@ -9,15 +9,26 @@
   justify-content: center;
   width: 100%;
   height: 100px;
-  background-color: #fff;
+  background-color: $palette-black;
   z-index: -1;
+
+  @include mobile {
+    height: 55px;
+  }
 
   .content {
     @include content;
+
+    @include mobile {
+      padding: 15px 25px;
+    }
   }
 
   .socials-list {
     display: flex;
+    width: 100%;
+    max-width: 320px;
+    justify-content: space-between;
 
     .socials-list__item {
       padding: 0 calc(25px / 2);

@@ -1,6 +1,8 @@
 import React from 'react';
 import './AboutMe.css';
 
+import Scrollchor from 'react-scrollchor';
+
 import myPhoto from './images/my_photo.png';
 
 const AboutMe = ( {aboutMe} ) => {
@@ -21,7 +23,7 @@ const AboutMe = ( {aboutMe} ) => {
                     <div className="about-me__buttons">
                         <a href="#" className="about-me__btn--cv">Download CV</a>
 
-                        <a href="#" className="about-me__btn--contact">Contact me</a>
+                        <Scrollchor to="#Contacts" className="about-me__btn--contact">Contact me</Scrollchor>
                     </div>
                 </div>
             </div>

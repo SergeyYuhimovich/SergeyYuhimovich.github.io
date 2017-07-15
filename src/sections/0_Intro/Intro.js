@@ -1,6 +1,8 @@
 import React from 'react';
 import './Intro.css';
 
+import Scrollchor from 'react-scrollchor';
+
 import FontAwesome from 'react-fontawesome';
 
 import bg1_9_16_640 from './images/bg1_9_16_640.jpg';
@@ -72,11 +74,11 @@ const Intro = () => {
                 <h2 className="subtitle">Front-end Web <span>&</span> Mobile Developer</h2>
             </div>
 
-            <a href="#" className="next-btn">
+            <Scrollchor to="#AboutMe" className="next-btn" animate={{duration: 600}}>
                 <FontAwesome className='next-btn__icon'
                              name='angle-down'
                 />
-            </a>
+            </Scrollchor>
         </div>
     )
 };

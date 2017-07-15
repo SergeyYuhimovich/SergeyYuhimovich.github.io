@@ -2,5 +2,42 @@
 @import 'utils/mixins';
 
 .social {
+  display: flex;
+  height: 25px;
+  text-decoration: none;
+  color: #fff;
 
+  &:hover {
+
+    .social__icon {
+
+      path {
+        fill: $palette-accent-primary;
+      }
+    }
+  }
+
+  .social__icon {
+    height: 100%;
+
+    path {
+      fill: $palette-gray-light;
+    }
+  }
+
+  .social__icon--telegram {
+    @extend .social__icon;
+  }
+
+  .social__icon--facebook {
+    @extend .social__icon;
+  }
+
+  .social__icon--skype {
+    @extend .social__icon;
+  }
+
+  .social__icon--linkedin {
+    @extend .social__icon;
+  }
 }

@@ -1,8 +1,6 @@
 import React from 'react';
 import './Contacts.css';
 
-import Input from './components/Input';
-
 const Contacts = () => {
     return (
         <div className="contacts" id="Contacts">
@@ -10,25 +8,32 @@ const Contacts = () => {
 
             <div className="content">
                 <form className="contacts__form" action="https://formspree.io/sergey.yuhimovich@gmail.com" method="post">
-                    <Input type="text"
+                    <input className="contacts__input--name"
+                           type="text"
                            name="name"
-                           label="Full name"
+                           placeholder="Full name"
+                           required
                     />
 
-                    <Input type="email"
+                    <input className="contacts__input--email"
+                           type="email"
                            name="email"
-                           label="Email"
+                           placeholder="Email"
+                           required
                     />
 
-                    <Input type="textarea"
-                           name="message"
-                           label="Message"
+                    <textarea className="contacts__input--message"
+                              name="message"
+                              rows={7}
+                              placeholder="Message"
+                              required
                     />
 
-                    <button className="contacts__submit" type="submit">Send</button>
+                    <button className="contacts__submit-btn" type="submit">Send message</button>
 
                     <input type="text" name="_gotcha" style={{display: 'none'}} />
                 </form>
+
             </div>
         </div>
     )

@@ -20,6 +20,9 @@ const ProjectDetails = ( {selectedProject, onCloseProjectDetails} ) => {
                 <div className="project-details__info">
                     <h3 className="project-details__title">{selectedProject.title}</h3>
 
+                    <div className="project-details__img-wrapper--mobile">
+                        <img src={selectedProject.image} alt="" className="project-details__img"/>
+                    </div>
 
                     <p className="project-details__description">{selectedProject.description}</p>
 

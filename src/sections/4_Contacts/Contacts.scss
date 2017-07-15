@@ -7,11 +7,97 @@
   min-height: calc(100vh - 100px);
   margin-bottom: 100px;
 
+  @include mobile {
+    margin-bottom: 55px;
+  }
+
   .title {
     @include title;
   }
 
   .content {
     @include content;
+  }
+
+  .contacts__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .contacts__input {
+    @include sizing('font-size', (320px: 14px, 1024px: 16px, 1600px: 18px, 1920px: 20px));
+    @include transition(border-color, 0.3s);
+
+    margin-bottom: 25px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid $palette-gray;
+    outline: none;
+
+    &::placeholder {
+      color: $palette-gray-light;
+    }
+
+    &:focus {
+      border-color: $palette-accent-primary;
+      color: $palette-black;
+
+      &::placeholder {
+        visibility: hidden;
+      }
+    }
+
+    &:-webkit-autofill {
+      background-color: #fff !important;
+    }
+  }
+
+  .contacts__input--name,
+  .contacts__input--email {
+    @extend .contacts__input;
+
+  }
+
+  .contacts__input--name {
+    @extend .contacts__input;
+  }
+
+  .contacts__input--message {
+    @extend .contacts__input;
+    resize: none;
+  }
+
+  .contacts__submit-btn {
+    @include sizing('height', (320px: 35px, 768px: 40px,  1600px: 50px));
+    @include sizing('padding-left', (768px: 25px,  1600px: 40px));
+    @include sizing('padding-right', (768px: 25px,  1600px: 40px));
+    @include sizing('border-radius', (320px: 17.5px, 769px: 20px, 1600px: 25px));
+    @include sizing('font-size', (320px: 12px, 1024px: 14px, 1600px: 16px, 1920px: 18px));
+    @include transition(background-color, 0.2s);
+
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 25px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $palette-accent-primary;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($palette-accent-primary, 8%);
+    }
+
+    &:active {
+      background-color: $palette-accent-primary;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }

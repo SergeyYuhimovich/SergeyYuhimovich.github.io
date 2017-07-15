@@ -18,6 +18,7 @@ class Footer extends Component {
                             <li className="socials-list__item" key={social.id}>
                                 <Social title={social.title}
                                         url={social.url}
+                                        icon={social.icon}
                                 />
                             </li>
                         )}

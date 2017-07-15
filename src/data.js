@@ -7,12 +7,12 @@ import gitlab from './sections/2_SkillsAndTools/images/gitlab.svg';
 import slack from './sections/2_SkillsAndTools/images/slack.svg';
 import toggl from './sections/2_SkillsAndTools/images/toggl.svg';
 
-import nicechatRect from './sections/3_Experience/images/nicechat-rect.jpg';
-import coopicoRect from './sections/3_Experience/images/coopico-rect.jpg';
-import navtvRect from './sections/3_Experience/images/navtv-rect.jpg';
-import navtvMobileRect from './sections/3_Experience/images/navtv-mobile-rect-2.jpg';
-import malachiteRect from './sections/3_Experience/images/malachite-rect.jpg';
-import myHomeRect from './sections/3_Experience/images/myhome-rect.jpg';
+import nicechatTab from './sections/3_Experience/images/nicechat-tab.jpg';
+import coopicoTab from './sections/3_Experience/images/coopico-tab.jpg';
+import navtvTab from './sections/3_Experience/images/navtv-tab.jpg';
+import navtvMobileTab from './sections/3_Experience/images/navtv-mobile-tab.jpg';
+import malachiteTab from './sections/3_Experience/images/malachite-tab.jpg';
+import myHomeTab from './sections/3_Experience/images/myhome-tab.jpg';
 
 import nicechat from './sections/3_Experience/images/nicechat.png';
 import coopico from './sections/3_Experience/images/coopico.png';
@@ -161,7 +161,7 @@ export const projectsData = [
         description: 'Full featured eCommerce oriented online chat solution.',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'React', 'React Router', 'Alt', 'Webpack', 'jQuery', 'Django Templates'],
         image: nicechat,
-        imageRect: nicechatRect,
+        imageRect: nicechatTab,
         url: 'https://www.nice.chat/'
     },
 
@@ -171,7 +171,7 @@ export const projectsData = [
         description: 'Classified advertisements website.',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'Angular'],
         image: coopico,
-        imageRect: coopicoRect,
+        imageRect: coopicoTab,
         url: 'https://www.coopico.com/'
     },
 
@@ -181,7 +181,7 @@ export const projectsData = [
         description: 'American manufacturer and distributor of automotive safety, entertainment and convenience products.',
         stack: ['HTML 5', 'CSS 3', 'SCSS', 'JavaScript', 'jQuery', 'Django Templates'],
         image: navtv,
-        imageRect: navtvRect,
+        imageRect: navtvTab,
         url: 'https://navtv.com/'
     },
 
@@ -191,7 +191,7 @@ export const projectsData = [
         description: 'Mobile chat app for NAVTV.',
         stack: ['React Native'],
         image: navtvMobile,
-        imageRect: navtvMobileRect,
+        imageRect: navtvMobileTab,
         url: 'https://itunes.apple.com/us/developer/navtv/id1182529526'
     },
 
@@ -201,7 +201,7 @@ export const projectsData = [
         description: 'SEO, SMM, UI/UX studio.',
         stack: ['HTML 5', 'SCSS', 'Foundation'],
         image: malachite,
-        imageRect: malachiteRect,
+        imageRect: malachiteTab,
         url: 'https://malachitestudio.com/'
     },
 
@@ -211,7 +211,7 @@ export const projectsData = [
         description: 'Mobile app for remote water heater control.',
         stack: ['React Native'],
         image: myHome,
-        imageRect: myHomeRect,
+        imageRect: myHomeTab,
         in_development: true
     }
 ];
@@ -220,28 +220,24 @@ export const socialsData = [
     {
         id: 1,
         title: 'Telegram',
-        icon: '',
         url: 'http://t.me/lvcivs'
     },
 
     {
         id: 2,
         title: 'Facebook',
-        icon: '',
         url: 'https://www.facebook.com/sergey.yuhimovich'
     },
 
     {
         id: 3,
         title: 'Skype',
-        icon: '',
         url: 'skype:lvcivs_m?chat'
     },
 
     {
         id: 4,
         title: 'LinkedIn',
-        icon: '',
         url: 'https://www.linkedin.com/in/sergey-yuhimovich-3b03a86b/'
     },
 ];
