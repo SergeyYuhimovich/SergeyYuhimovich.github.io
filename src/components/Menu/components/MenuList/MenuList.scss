@@ -1,0 +1,73 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+.menu-list {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+  z-index: 2;
+
+  @include mobile {
+    &:not(.menu-list--mobile) {
+      display: none;
+    }
+  }
+
+  .menu-list__item {
+
+  }
+
+  .menu-list__link {
+    @include sizing('padding-left', (600px: 15px, 768px: 25px, 1600px: 30px));
+    @include sizing('padding-right', (600px: 15px, 768px: 25px, 1600px: 30px));
+    @include sizing('font-size', (768px: 12px, 1600px: 18px));
+    @include transition(color);
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      color: $palette-accent-primary-text;
+    }
+
+    &::after {
+      @include transition(opacity, 0.2s);
+
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      align-self: center;
+      display: block;
+      width: 100%;
+      height: 2px;
+      opacity: 0;
+      background-color: $palette-accent-primary-text;
+    }
+  }
+
+  .menu-list__link--active {
+    @extend .menu-list__link;
+
+    color: $palette-accent-primary-text !important;
+    cursor: default;
+  }
+}
+
+.menu-list--mobile {
+  @extend .menu-list;
+
+  flex-direction: column;
+
+  .menu-list__link {
+    color: $palette-black;
+  }
+}

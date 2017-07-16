@@ -35,7 +35,7 @@
       @include sizing('border-bottom-right-radius', (320px: 3px, 768px: 3px, 1600px: 5px));
 
       height: 100%;
-      background-color: $palette-accent-primary;
+      background-color: lighten($palette-accent-primary, 7%);
     }
 
     .progressbar__progress--html-5 {

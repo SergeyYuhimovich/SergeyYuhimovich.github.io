@@ -1,68 +1,58 @@
-import React from 'react';
-import Scrollchor from 'react-scrollchor';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/actions';
+import MenuList from './components/MenuList';
+import FontAwesome from 'react-fontawesome';
+import Modal from 'react-modal';
 import './Menu.css';
 
-const Menu = ( {currentSection} ) => {
-    console.log(currentSection);
+class Menu extends Component {
+    render() {
+        const {reducers: { currentSection, menuIsOpen }, onMenuToggle } = this.props;
 
-    return (
-        <div className={currentSection === 'top' ? 'menu' : 'menu menu--onscroll'}>
-            <div className="menu__background"/>
+        return (
+            <div className={currentSection === 'top' ? 'menu' : 'menu menu--onscroll'}>
+                <div className="menu__background"/>
 
-            <div className="content">
-                <div className="menu__logo">
-                    <span>SY</span>
+                <div className="content">
+                    <div className="menu__logo">
+                        <span>SY</span>
+                    </div>
+
+                    <button className="menu-btn" type="button" onClick={onMenuToggle}>
+                        <FontAwesome className='menu-btn__icon'
+                                     name='bars'
+                        />
+                    </button>
+
+                    <MenuList currentSection={currentSection}/>
                 </div>
 
-                <ul className="menu__list">
-                    <li className="menu__item">
-                        {currentSection === 'intro' || currentSection === 'top'
-                            ?
-                            <span className="menu__link--active">Home</span>
-                            :
-                            <Scrollchor to="" className="menu__link" animate={{duration: 600}}>Home</Scrollchor>
-                        }
-                    </li>
+                <Modal isOpen={menuIsOpen}
+                       contentLabel="Modal"
+                       onRequestClose={onMenuToggle}
+                       className="menu-mobile"
+                       overlayClassName="menu-mobile-overlay"
+                >
+                    <div className="menu-mobile__top-row">
+                        <div className="menu-mobile__logo">
+                            <span>SY</span>
+                        </div>
 
-                    <li className="menu__item">
-                        {currentSection === 'about'
-                            ?
-                            <span className="menu__link--active">About Me</span>
-                            :
-                            <Scrollchor to="#AboutMe" className="menu__link" animate={{duration: 600}}>About Me</Scrollchor>
-                        }
-                    </li>
+                        <button className="menu-mobile__close-btn" type="button" onClick={onMenuToggle}>
+                            <FontAwesome className='menu-btn__icon'
+                                         name='times'
+                            />
+                        </button>
+                    </div>
 
-                    <li className="menu__item">
-                        {currentSection === 'skillsAndTools'
-                            ?
-                            <span className="menu__link--active">Skills & Tools</span>
-                            :
-                            <Scrollchor to="#SkillsAndTools" className="menu__link" animate={{duration: 600}}>Skills & Tools</Scrollchor>
-                        }
-                    </li>
-
-                    <li className="menu__item">
-                        {currentSection === 'experience'
-                            ?
-                            <span className="menu__link--active">Experience</span>
-                            :
-                            <Scrollchor to="#Experience" className="menu__link" animate={{duration: 600}}>Experience</Scrollchor>
-                        }
-                    </li>
-
-                    <li className="menu__item">
-                        {currentSection === 'contacts'
-                            ?
-                            <span className="menu__link--active">Contacts</span>
-                            :
-                            <Scrollchor to="#Contacts" className="menu__link" animate={{duration: 600}}>Contacts</Scrollchor>
-                        }
-                    </li>
-                </ul>
+                    <MenuList currentSection={currentSection}
+                              mobile={true}
+                    />
+                </Modal>
             </div>
-        </div>
-    )
-};
+        )
+    }
+}
 
-export default Menu;
+export default connect( ( {reducers} ) => ( {reducers} ), actions )(Menu);

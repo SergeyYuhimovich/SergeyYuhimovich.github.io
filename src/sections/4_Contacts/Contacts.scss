@@ -26,6 +26,9 @@
     max-width: 450px;
   }
 
+  .contacts__input:valid,
+  .contacts__input:invalid,
+  .contacts__input:required,
   .contacts__input {
     @include sizing('font-size', (320px: 14px, 1024px: 16px, 1600px: 18px, 1920px: 20px));
     @include transition(border-color, 0.3s);
@@ -35,6 +38,7 @@
     border: none;
     border-bottom: 2px solid $palette-gray;
     outline: none;
+    box-shadow: none;
 
     &::placeholder {
       color: $palette-gray-light;

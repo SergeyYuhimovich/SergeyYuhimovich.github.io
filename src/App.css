@@ -90,6 +90,7 @@ ul {
 
 .app {
   position: relative;
+  min-width: 320px;
   margin: 0 auto; }
 
 .fa,

@@ -7,6 +7,12 @@ export function onWaypointEvent(section) {
     };
 }
 
+export function onMenuToggle() {
+    return {
+        type: types.ON_MENU_TOGGLE
+    }
+}
+
 export function onOpenProjectDetails(projectId) {
     return {
         type: types.ON_OPEN_PROJECT_DETAILS,

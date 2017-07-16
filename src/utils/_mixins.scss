@@ -186,6 +186,7 @@ Note: mixin name changed from 'poly-fluid-sizing' to 'sizing'
 ========================*/
 
 @mixin section {
+  @include sizing('padding-top', (320px: 70px, 599px: 90px));
   position: relative;
   display: flex;
   flex-direction: column;
@@ -194,9 +195,6 @@ Note: mixin name changed from 'poly-fluid-sizing' to 'sizing'
   min-height: 100vh;
   padding-top: 90px;
   background-color: #fff;
-
-  // temporary
-  // outline: 2px dashed salmon;
 }
 
 @mixin title {
@@ -225,9 +223,6 @@ Note: mixin name changed from 'poly-fluid-sizing' to 'sizing'
   width: 100%;
   max-width: 1650px;
   padding: 25px;
-
-  // temporary
-  // outline: 2px dashed cornflowerblue;
 }
 
 @mixin transition($property: background-color, $time: 0.2s) {

@@ -2,6 +2,7 @@
 @import 'utils/mixins';
 
 .menu {
+  @include sizing('height', (320px: 40px, 599px: 60px));
   @include transition;
   @include transition(top, 0.3s);
 
@@ -29,7 +30,7 @@
       }
     }
 
-    .menu__link:not(.menu__link--active) {
+    .menu-list__link:not(.menu__link--active) {
       color: $palette-gray-dark;
 
       &:hover {
@@ -37,10 +38,17 @@
       }
     }
 
-    .menu__link--active {
+    .menu-list__link--active {
 
       &::after {
         opacity: 1;
+      }
+    }
+
+    .menu-btn {
+
+      span::before {
+        color: $palette-black;
       }
     }
   }
@@ -62,28 +70,37 @@
     justify-content: space-between;
     padding: 0 25px;
 
+    @include mobile {
+      padding: 0;
+    }
+
     // temporary
     outline: none;
   }
 
   .menu__logo {
+    @include sizing('width', (320px: 30px, 599px: 40px));
+    @include sizing('height', (320px: 30px, 599px: 40px));
     @include transition(border-color);
 
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
     border: 1px solid #fff;
     border-radius: 50%;
     background-color: transparent;
     z-index: 3;
 
+    @include mobile {
+      @include sizing('margin-left', (320px: 10px, 599px: 25px));
+    }
+
     span {
       @include transition(color);
+      @include sizing('font-size', (320px: 18px, 599px: 24px));
 
       line-height: 1;
-      font-size: 24px;
       font-weight: 100;
       color: #fff;
       cursor: default;
@@ -91,62 +108,117 @@
     }
   }
 
-  .menu__list {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
+  .menu-btn {
+    @include sizing('width', (320px: 40px, 599px: 60px));
+    @include sizing('height', (320px: 40px, 599px: 60px));
+
+    display: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
     background-color: transparent;
-    z-index: 3;
+    z-index: 2;
+    cursor: pointer;
+
+    @include mobile {
+      display: initial;
+    }
+
+    span::before {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    &:hover {
+      span::before {
+        color: $palette-accent-primary-text;
+      }
+    }
+  }
+}
+
+.menu-mobile-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: transparent;
+  z-index: 99;
+}
+
+.menu-mobile {
+  width: 100%;
+  outline: none;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+
+  .menu-mobile__top-row {
+    @include sizing('height', (320px: 40px, 599px: 60px));
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .menu__item {
+  .menu-mobile__logo {
+    @include sizing('width', (320px: 30px, 599px: 40px));
+    @include sizing('height', (320px: 30px, 599px: 40px));
+    @include sizing('margin-left', (320px: 10px, 599px: 25px));
 
-  }
-
-  .menu__link {
-    @include sizing('font-size', (768px: 12px, 1600px: 18px));
-    @include transition(color);
-
-    position: relative;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    padding: 0 25px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
+    border: 1px solid $palette-black;
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 3;
 
-    &:hover {
-      color: $palette-accent-primary-text;
-    }
+    span {
+      @include sizing('font-size', (320px: 18px, 599px: 24px));
 
-    &::after {
-      @include transition(opacity, 0.2s);
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      align-self: center;
-      display: block;
-      width: 100%;
-      height: 2px;
-      opacity: 0;
-      background-color: $palette-accent-primary-text;
+      line-height: 1;
+      font-weight: 100;
+      color: $palette-black;
+      cursor: default;
+      user-select: none;
     }
   }
 
-  .menu__link--active {
-    @extend .menu__link;
+  .menu-mobile__close-btn {
+    @include sizing('width', (320px: 40px, 599px: 60px));
+    @include sizing('height', (320px: 40px, 599px: 60px));
 
-    color: $palette-accent-primary-text;
-    cursor: default;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    z-index: 2;
+    cursor: pointer;
+
+    @include mobile {
+      display: initial;
+    }
+
+    span::before {
+      font-size: 20px;
+      color: $palette-black;
+    }
+
+    &:hover {
+      span::before {
+        color: $palette-accent-primary-text;
+      }
+    }
   }
 }
 
 .ReactModal__Body--open {
 
-  .menu {
-    top: -60px;
-  }
 }
