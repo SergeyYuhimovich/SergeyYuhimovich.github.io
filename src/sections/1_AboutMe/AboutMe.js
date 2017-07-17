@@ -21,7 +21,7 @@ const AboutMe = ( {aboutMe} ) => {
                     </div>
 
                     <div className="about-me__buttons">
-                        <a href="#" className="about-me__btn--cv">Download CV</a>
+                        <a href="Sergey Yuhimovich CV.pdf" className="about-me__btn--cv" download>Download CV</a>
 
                         <Scrollchor to="#Contacts" className="about-me__btn--contact">Contact me</Scrollchor>
                     </div>

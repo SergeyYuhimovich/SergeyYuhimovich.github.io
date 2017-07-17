@@ -25,19 +25,30 @@ class App extends Component {
 
                 <Intro />
 
-                <Waypoint scrollableAncestor={window} onLeave={() => onWaypointEvent('intro')} topOffset={'99%'} />
+                <Waypoint scrollableAncestor={window}
+                          onLeave={() => onWaypointEvent('intro')}
+                />
 
                 <AboutMe aboutMe={aboutMe}/>
 
-                <Waypoint scrollableAncestor={window} onEnter={() => onWaypointEvent('about')} topOffset={'50%'} />
+                <Waypoint scrollableAncestor={window}
+                          onEnter={() => onWaypointEvent('about')}
+                          topOffset={'50%'}
+                />
 
                 <SkillsAndTools />
 
-                <Waypoint scrollableAncestor={window} onEnter={() => onWaypointEvent('skillsAndTools')} topOffset={'50%'} />
+                <Waypoint scrollableAncestor={window}
+                          onEnter={() => onWaypointEvent('skillsAndTools')}
+                          topOffset={'50%'}
+                />
 
                 <Experience />
 
-                <Waypoint scrollableAncestor={window} onEnter={() => onWaypointEvent('experience')} topOffset={'50%'} />
+                <Waypoint scrollableAncestor={window}
+                          onEnter={() => onWaypointEvent('experience')}
+                          topOffset={'50%'}
+                />
 
                 <Contacts />
 

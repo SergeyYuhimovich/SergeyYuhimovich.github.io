@@ -209,7 +209,7 @@ export const projectsData = [
         id: 6,
         title: 'My Home',
         description: 'Mobile app for remote water heater control.',
-        stack: ['React Native'],
+        stack: ['React Native', 'Redux'],
         image: myHome,
         imageRect: myHomeTab,
         in_development: true
