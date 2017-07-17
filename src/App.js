@@ -21,12 +21,15 @@ class App extends Component {
             <div className="app">
                 <Menu currentSection={currentSection} />
 
-                <Waypoint onEnter={() => onWaypointEvent('top')}/>
+                <Waypoint scrollableAncestor={window}
+                          onEnter={() => onWaypointEvent('top')}
+                />
 
                 <Intro />
 
                 <Waypoint scrollableAncestor={window}
                           onLeave={() => onWaypointEvent('intro')}
+                          topOffset={'99%'}
                 />
 
                 <AboutMe aboutMe={aboutMe}/>
@@ -41,6 +44,7 @@ class App extends Component {
                 <Waypoint scrollableAncestor={window}
                           onEnter={() => onWaypointEvent('skillsAndTools')}
                           topOffset={'50%'}
+                          Offset={'50%'}
                 />
 
                 <Experience />
